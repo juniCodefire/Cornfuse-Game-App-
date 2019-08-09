@@ -1,0 +1,62 @@
+.index-full{
+    height: 100vh;
+    background: linear-gradient(-45deg,#29111e,#781c4e, indigo);
+    background-position: center;
+    background-size: 400% 400%;
+    animation: gradientWallpaper 10s ease infinite;
+}
+@keyframes gradientWallpaper { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.our-nav{
+    background: rgba(0,0,0,0.5);
+}
+.our-nav a{
+    color: white;
+}
+.index-body{
+    height: 90vh;
+}
+.carousel-holder{
+    height: 80vh;
+    
+}
+.card-holder{
+    height: 70vh;
+    
+}
+.cards{
+    height: 100%;
+    border-radius: 5px;
+}
+.card-bg{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    /* display: none; */
+    border-radius: 5px;
+    display: table;
+    background-color: #35092e;
+}
+.card-bg div{
+    display: table-cell;
+    vertical-align:middle;
+}
+.card-bg img{
+    width: 60%;
+}
+.card-value{
+    height: 100%;
+    width: 100%;
+    background-color: skyblue;
+    position: absolute;
+    z-index: 1;
+    border-radius: 5px;
+}
+.temp-value{
+    font-size: 20vh;
+}
