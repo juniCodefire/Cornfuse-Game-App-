@@ -1,0 +1,188 @@
+.index-full{
+    height: 100vh;
+    background: linear-gradient(-45deg,#29111e,#781c4e, indigo);
+    background-position: center;
+    background-size: 400% 400%;
+    animation: gradientWallpaper 10s ease infinite;
+}
+@keyframes gradientWallpaper { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.our-nav{
+    background: rgba(0,0,0,0.5);
+}
+.our-nav a{
+    color: white;
+}
+.index-body{
+    height: 90vh;
+}
+.carousel-holder{
+    height: 80vh;
+    
+}
+.card-holder{
+    height: 70vh;
+    
+}
+.cards{
+    height: 100%;
+    border-radius: 5px;
+}
+.card-bg{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    border-radius: 5px;
+    display: table;
+    background-color: #35092e;
+}
+.card-bg div{
+    display: table-cell;
+    vertical-align:middle;
+}
+.card-bg img{
+    width: 60%;
+}
+.card-value{
+    height: 100%;
+    width: 100%;
+    /* background-color: skyblue; */
+    font-family: 'Cabin Sketch', cursive;
+    color: #e6e6e6;
+    position: absolute;
+    z-index: 1;
+    border-radius: 5px;
+}
+.temp-value{
+    font-size: 20vh;
+}
+
+/* Styling The Cards */
+/*Card-Block */
+.game_block_1  {
+      animation: card-block__1 1s ease 1s alternate;
+     -webkit-animation: card-block__1 1s ease 1s alternate;
+}
+/*Card-Block */
+
+.game_block_2 {
+      animation: card-block__2 1s ease 1s alternate;
+     -webkit-animation: card-block__2 1s ease 1s alternate;
+}
+
+/*Card-Block 3*/
+.game_block_3 {
+      animation: card-block__3 1s ease 1s alternate;
+     -webkit-animation: card-block__3 1s ease 1s alternate;
+}
+.error_choice {
+    border: 1px solid tomato !important;
+}
+.correct_choice {
+    border: 1px solid lime !important;
+}
+.carousel-modify {
+    margin-top:5.5vh !important;
+}
+.cornfuse-player {
+    font-size: 4vh;
+    width: 50%;
+    text-align: left;
+    float: left;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cabin Sketch', cursive;
+
+}
+.cornfuse-point {
+    font-size: 4vh;
+    width: 50%;
+    float: right;
+    text-align: right;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cabin Sketch', cursive;
+
+}
+.info {
+    position: absolute;
+    width: 100%;
+    font-size: 10vh;
+    z-index: 99999;
+    color: tomato;
+    font-family: 'Cabin Sketch', cursive;
+     margin-top: 200px;
+}
+.info p{
+    text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes card-block__1  {
+    from {
+        transform: perspective(30000) rotateY(0deg);
+        transform-origin: 100% 100%;
+       -webkit-transform: perspective(30000) rotateY(0deg);
+       -webkit-transform-origin: 100% 100%;
+    }
+    to {
+        transform: perspective(30000) rotateY(100deg);
+        transform-origin: 100% 100%;
+       -webkit-transform: perspective(30000) rotateY(100deg);
+        -webkit-transform-origin: 100% 100%;
+    }
+}
+@keyframes card-block__2  {
+    from {
+        transform: perspective(50000) rotateY(0deg);
+        transform-origin: 100% 100%;
+       -webkit-transform: perspective(50000) rotateY(0deg);
+       -webkit-transform-origin: 100% 100%;
+    }
+    to {
+        transform: perspective(50000) rotateY(90deg);
+        transform-origin: 100% 100%;
+       -webkit-transform: perspective(50000) rotateY(90deg);
+        -webkit-transform-origin: 100% 100%;
+    }
+}
+@keyframes card-block__3  {
+    from {
+        transform: perspective(50000) rotateY(0deg);
+        transform-origin: 100% 100%;
+       -webkit-transform: perspective(50000) rotateY(0deg);
+       -webkit-transform-origin: 100% 100%;
+    }
+    to {
+        transform: perspective(50000) rotateY(80deg);
+        transform-origin: 100% 100%;
+       -webkit-transform: perspective(50000) rotateY(80deg);
+        -webkit-transform-origin: 100% 100%;
+    }
+}
