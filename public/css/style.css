@@ -1,3 +1,4 @@
+
 .index-full{
     height: 100vh;
     background: linear-gradient(-45deg,#29111e,#781c4e, indigo);
@@ -118,7 +119,7 @@
     z-index: 99999;
     color: tomato;
     font-family: 'Cabin Sketch', cursive;
-     margin-top: 200px;
+     margin-top: 150px;
 }
 .info p{
     text-align:center;
