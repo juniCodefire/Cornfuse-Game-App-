@@ -29,6 +29,7 @@
     
 }
 .cards{
+    background-color: transparent;
     height: 100%;
     border-radius: 5px;
 }
@@ -52,9 +53,9 @@
 .card-value{
     height: 100%;
     width: 100%;
-    /* background-color: skyblue; */
+    background-color: white;
     font-family: 'Cabin Sketch', cursive;
-    color: #e6e6e6;
+    color: #35092e;
     position: absolute;
     z-index: 1;
     border-radius: 5px;
@@ -62,7 +63,54 @@
 .temp-value{
     font-size: 20vh;
 }
-
+/* Leaderboards styling */
+.lead-con{
+    height: 90vh;
+}
+.lead-list{
+    height: 70vh;
+}
+.user-stat{
+    height: 10vh;
+}
+.overall-stat{
+    height: 60vh;
+}
+.lead-header{
+    height: 8vh;
+    background-color: black;
+    color: white;
+}
+.individual-stat{
+    height: 7vh;
+    border-radius: 5px;
+    /* background-color: lightgrey; */
+}
+.overall-user-image img{
+    height: 6vh;
+    width:6vh;
+    border-radius: 50%;
+}
+.overall-user-rank span{
+    color: white;
+    font-size: 24px;
+}
+.head-user-name span{
+    font-size: 20px;
+}
+.overall-user-name span{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.overall-user-score span{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* .head-user-score span{
+    font-size: 10px;
+} */
 /* Styling The Cards */
 /*Card-Block */
 .game_block_1  {
@@ -88,7 +136,6 @@
     border: 1px solid lime !important;
 }
 .carousel-modify {
-    margin-top:5.5vh !important;
 }
 .cornfuse-player {
     font-size: 4vh;
