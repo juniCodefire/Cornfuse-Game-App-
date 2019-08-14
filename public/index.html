@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/animated.css" />
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/style.css" />
     <title>Cornfuse</title>
     <!-- <script>
@@ -46,14 +47,56 @@
                         </ul>
                     </div>
                 </nav>
-                <div class="index-body col-12 border row px-0 mx-0">
-                    <div class="col-5 border-right">
+                <div class="index-body col-12 row px-0 mx-0">
+                    <div class="col-5 leaderboards">
+                        <div class="col-11 mx-auto border lead-con">
+                            <!-- <div class="col-12">
+                                <h4 class="color-white">Leaderboards</h4>
+                            </div>
+                            <div class="lead-list col-12 px-0">
+                                <div class="row mx-0 border lead-header">
+                                    <div class="col-2 border-right">
+                                        <span>#</span>
+                                    </div>
+                                    <div class="col-2 border-right head-user-image">
 
+                                    </div>
+                                    <div class="col-5 border-right head-user-name text-center">
+                                        <span>User</span>
+                                    </div>
+                                    <div class="col-3 head-user-score">
+                                        <span>Score</span>
+                                    </div>
+                                </div>
+                                <div class="overall-stat col-12 px-0 border-bottom">
+                                    <div class="individual-stat col-12 mx-0 mt-1 px-0 row border-bottom">
+                                        <div class="col-2 overall-user-rank text-center">
+                                            <span class="mt-4">1</span>
+                                        </div>
+                                        <div class="col-2 overall-user-image">
+                                            <img src="images/cornfuse_white.jpg" alt="">
+    
+                                        </div>
+                                        <div class="col-5 overall-user-name text-center">
+                                            <span>Username</span>
+                                        </div>
+                                        <div class="col-3 overall-user-score">
+                                            <span>1495</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-stat border mt-1">
+
+                            </div> -->
+                        </div>
                     </div>
                     <div class="col-7">
-                        <p class="cornfuse-player">Player: jamiegamer</p>
-                        <p class="cornfuse-point">Points: <span class="point-number">100pt</span></p>
-                        <div class="carousel-holder col-11 border mx-auto mt-2 carousel-modify ">
+                        <div class="col-12 row">
+                            <p class="cornfuse-player col-6">Player: jamiegamer</p>
+                            <p class="cornfuse-point col-6">Points: <span class="point-number">100pt</span></p>
+                        </div>
+                        <div class="carousel-holder col-11 mx-auto carousel-modify ">
                             <div id="indicators" class="carousel slide" data-ride="">
                                 <ol class="carousel-indicators">
                                     <li data-target="#indicators" data-slide-to="0" class="active"></li>
@@ -67,10 +110,10 @@
                                         </div>
                                         <div class="card-holder col-12 mx-auto mt-4 row" data-game-brand>
                                             <div class="col-4 my-2">
-                                                <div class="col-12 border cards px-0" data-game-holder>
+                                                <div class="col-12 cards px-0" data-game-holder>
                                                     <div class="card-bg" data-game-cover-0>
                                                         <div class="col-6 mx-auto text-center">
-                                                            <img class="" src="images/dash.png" alt="">
+                                                            <img class="" src="images/cornfuse-logo.png" alt="">
                                                         </div>
                                                     </div>
                                                     <div class="card-value text-center" id="game-value-box-0">
@@ -80,23 +123,26 @@
                                                 </div>
                                             </div>
                                             <div class="col-4 my-2">
-                                                <div class="col-12 border cards px-0" data-game-holder>
-                                                    <div class="card-bg" data-game-cover-1>
-                                                        <div class="col-6 mx-auto text-center">
-                                                            <img class="" src="images/dash.png" alt="">
+                                                <div class="col-12 cards px-0" data-game-holder>
+                                                    <div class="flip-card-inner">
+                                                        <div class="flip-card-front card-bg" data-game-cover-1>
+                                                            <div class="col-6 mx-auto text-center">
+                                                                <img class="" src="images/cornfuse-logo.png" alt="">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="card-value text-center" id="game-value-box-1">
-                                                        <span class="temp-value" id="game-value-1"
-                                                            data-val-id="1">A</span>
+                                                        <div class="flip-card-back card-value text-center"
+                                                            id="game-value-box-1">
+                                                            <span class="temp-value" id="game-value-1"
+                                                                data-val-id="1">A</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-4 my-2">
-                                                <div class="col-12 border cards px-0" data-game-holder>
+                                                <div class="col-12 cards px-0" data-game-holder>
                                                     <div class="card-bg" data-game-cover-2>
                                                         <div class="col-6 mx-auto text-center">
-                                                            <img class="" src="images/dash.png" alt="">
+                                                            <img class="" src="images/cornfuse-logo.png" alt="">
                                                         </div>
                                                     </div>
                                                     <div class="card-value text-center" id="game-value-box-2">
@@ -106,10 +152,10 @@
                                                 </div>
                                             </div>
                                             <div class="col-4 my-2">
-                                                <div class="col-12 border cards px-0" data-game-holder>
+                                                <div class="col-12 cards px-0" data-game-holder>
                                                     <div class="card-bg" data-game-cover-3>
                                                         <div class="col-6 mx-auto text-center">
-                                                            <img class="" src="images/dash.png" alt="">
+                                                            <img class="" src="images/cornfuse-logo.png" alt="">
                                                         </div>
                                                     </div>
                                                     <div class="card-value text-center" id="game-value-box-3">
@@ -119,10 +165,10 @@
                                                 </div>
                                             </div>
                                             <div class="col-4 my-2">
-                                                <div class="col-12 border cards px-0" data-game-holder>
+                                                <div class="col-12 cards px-0" data-game-holder>
                                                     <div class="card-bg" data-game-cover-4>
                                                         <div class="col-6 mx-auto text-center">
-                                                            <img class="" src="images/dash.png" alt="">
+                                                            <img class="" src="images/cornfuse-logo.png" alt="">
                                                         </div>
                                                     </div>
                                                     <div class="card-value text-center" id="game-value-box-4">
@@ -132,15 +178,17 @@
                                                 </div>
                                             </div>
                                             <div class="col-4 my-2">
-                                                <div class="col-12 border cards px-0" data-game-holder>
-                                                    <div class="card-bg" data-game-cover-5>
-                                                        <div class="col-6 mx-auto text-center">
-                                                            <img class="" src="images/dash.png" alt="">
+                                                <div class="col-12 cards px-0" data-game-holder>
+                                                    <div class="flip-card-inner">
+                                                        <div class="card-bg" data-game-cover-5>
+                                                            <div class="col-6 mx-auto text-center">
+                                                                <img class="" src="images/cornfuse-logo.png" alt="">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="card-value text-center" id="game-value-box-5">
-                                                        <span class="temp-value" id="game-value-5"
-                                                            data-val-id="5">B</span>
+                                                        <div class="card-value text-center" id="game-value-box-5">
+                                                            <span class="temp-value" id="game-value-5"
+                                                                data-val-id="5">B</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
