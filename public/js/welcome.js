@@ -1,36 +1,24 @@
 const cards = Array.from(document.querySelectorAll('[data-game-brand] [data-game-holder]'));
+
 console.log(cards);
 // cardValue = {
 //     0: ""
 // }
 
-const animCard_1 = (card_cover, i) =>
-{
-    setTimeout(() =>
-    {
-        if (i === 0)
-        {
-            card_cover.classList.add('game_block_1');
-
-            setTimeout(() =>
-            {
-                card_cover.style.visibility = "hidden";
-            }, 2000);
+const animCard_1 = (card_cover, i) => {
+    setTimeout(() => {
+        if (i === 0) {
+            card_cover.classList.add('flip-card-inner_transform');
         }
     }, 500);
 }
 
-const animCard_2 = (card_cover, i) =>
-{
-    setTimeout(() =>
-    {
-        if (i === 4)
-        {
-            card_cover.classList.add('game_block_2');
+const animCard_2 = (card_cover, i) => {
+    setTimeout(() => {
+        if (i === 4) {
+            card_cover.classList.add('flip-card-inner_transform');
             // card.style.transition = "1s all ease";
-            setTimeout(() =>
-            {
-                card_cover.style.visibility = "hidden";
+            setTimeout(() => {
                 animManipualate_1(cards);
             }, 2000);
         }
@@ -39,43 +27,30 @@ const animCard_2 = (card_cover, i) =>
 }
 
 
-const animCard_3 = (card_cover, i) =>
-{
-    setTimeout(() =>
-    {
-        if (i === 2)
-        {
-            card_cover.classList.add('game_block_3');
+const animCard_3 = (card_cover, i) => {
+    setTimeout(() => {
+        if (i === 2) {
+            card_cover.classList.add('flip-card-inner_transform');
             // card.style.transition = "1s all ease";
-            setTimeout(() =>
-            {
-                card_cover.style.visibility = "hidden";
-            }, 2000);
         }
-    }, 5700);
+    }, 7300);
 
 }
-const animCard_4 = (card_cover, i) =>
-{
-    setTimeout(() =>
-    {
-        if (i === 3)
-        {
-            card_cover.classList.add('game_block_1');
+const animCard_4 = (card_cover, i) => {
+    setTimeout(() => {
+        if (i === 3) {
+            card_cover.classList.add('flip-card-inner_transform');
             // card.style.transition = "1s all ease";
-            setTimeout(() =>
-            {
-                card_cover.style.visibility = "hidden";
+            setTimeout(() => {
                 animManipualate_2(cards);
             }, 2000);
         }
-    }, 6500);
+    }, 8300);
 
 }
 
 
-const animManipualate_1 = (cards) =>
-{
+const animManipualate_1 = (cards) => {
     const card_cover_0 = document.querySelector(`[data-game-cover-0]`);
     const card_cover_4 = document.querySelector(`[data-game-cover-4]`);
 
@@ -95,12 +70,11 @@ const animManipualate_1 = (cards) =>
 
     //Pop out a You lost Modal on the screen
 
-    setTimeout(() =>
-    {
+    setTimeout(() => {
         card_cover_0.classList.remove('game_block_1');
         card_cover_4.classList.remove('game_block_2');
-        card_cover_0.style.visibility = "visible";
-        card_cover_4.style.visibility = "visible";
+        card_cover_0.classList.remove('flip-card-inner_transform');
+        card_cover_4.classList.remove('flip-card-inner_transform');
         cards[0].classList.remove('error_choice');
         cards[4].classList.remove('error_choice');
         cards[0].classList.remove('animated', 'shake');
@@ -110,8 +84,7 @@ const animManipualate_1 = (cards) =>
     }, 3000);
 }
 
-const animManipualate_2 = (cards) =>
-{
+const animManipualate_2 = (cards) => {
     const card_cover_2 = document.querySelector(`[data-game-cover-2]`);
     const card_cover_3 = document.querySelector(`[data-game-cover-3]`);
 
@@ -132,12 +105,11 @@ const animManipualate_2 = (cards) =>
 
     //Pop out a You lost Modal on the screen
 
-    setTimeout(() =>
-    {
+    setTimeout(() => {
         card_cover_2.classList.remove('game_block_3');
         card_cover_3.classList.remove('game_block_1');
-        card_cover_2.style.visibility = "visible";
-        card_cover_3.style.visibility = "visible";
+        card_cover_2.classList.remove('flip-card-inner_transform');
+        card_cover_3.classList.remove('flip-card-inner_transform');
         cards[2].classList.remove('correct_choice');
         cards[3].classList.remove('correct_choice');
         cards[2].classList.remove('animated', 'shake');
@@ -150,10 +122,8 @@ const animManipualate_2 = (cards) =>
 }
 
 
-const animationMaster = (cards) =>
-{
-    cards.map((card, i) =>
-    {
+const animationMaster = (cards) => {
+    cards.map((card, i) => {
         const card_cover = document.querySelector(`[data-game-cover-${ i }]`);
         const card_value = document.querySelector(`#game-value-${ i }`);
         console.log(card_value);
@@ -168,13 +138,11 @@ const animationMaster = (cards) =>
 }
 
 
-setInterval(() =>
-{
+setInterval(() => {
     animationMaster(cards);
-}, 12000);
+}, 14000);
 animationMaster(cards);
 
 
 
 console.log('confuse App');
-
