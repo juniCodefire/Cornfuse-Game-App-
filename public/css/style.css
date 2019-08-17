@@ -1,4 +1,7 @@
 
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
 .index-full{
     height: 100vh;
     background: linear-gradient(-45deg,#29111e,#781c4e, indigo);
@@ -71,42 +74,35 @@
     height: 70vh;
 }
 .user-stat{
-    height: 10vh;
+    height: 7vh;
 }
-.overall-stat{
+.user-stat .individual-stat{
+    background-color: #11ff00
+}
+.overall-stats{
     height: 60vh;
 }
 .lead-header{
     height: 8vh;
     background-color: black;
     color: white;
+    border: 1px solid white;
 }
 .individual-stat{
-    height: 7vh;
     border-radius: 5px;
-    /* background-color: lightgrey; */
+    height: 7vh;
+    background-color: lightgrey;
 }
-.overall-user-image img{
-    height: 6vh;
-    width:6vh;
+.individual-stat h4, .individual-stat span{
+    font-weight: bold;
+}
+.user-image img{
     border-radius: 50%;
+    height:6vh;
+    width: 6vh;
 }
-.overall-user-rank span{
-    color: white;
-    font-size: 24px;
-}
-.head-user-name span{
+.actual-name-span{
     font-size: 20px;
-}
-.overall-user-name span{
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-}
-.overall-user-score span{
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
 }
 /* .head-user-score span{
     font-size: 10px;
