@@ -17,7 +17,9 @@
 .color-white {
   color: white;
 }
-
+.our-nav{
+  background: rgba(0,0,0,0.5);
+}
 /* Card animation */
 .cards {
   background-color: transparent;

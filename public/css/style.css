@@ -14,9 +14,7 @@ body{
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
-.our-nav{
-    background: rgba(0,0,0,0.5);
-}
+
 .our-nav a{
     color: white;
 }
