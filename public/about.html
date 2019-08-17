@@ -1,299 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" 
-          content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    
-    <title>Mini App</title>
-    
-    <style>
-      body {
-      margin: 0;
-      padding: 1em;
-	  background: white;
-    }
 
-    [data-cart-info],
-    [data-credit-card] {
-      transform: scale(0.78);
-      margin-left: -3.4em;
-    }
-
-    [data-cc-info] input:focus,
-    [data-cc-digits] input:focus {
-      outline: none;
-    }
-
-    .mdc-card__primary-action,
-    .mdc-card__primary-action:hover {
-      cursor: auto;
-      padding: 20px;
-      min-height: inherit;
-    }
-
-    [data-credit-card] [data-card-type] {
-      transition: width 1.5s;
-      margin-left: calc(100% - 130px);
-    }
-
-    [data-credit-card].is-visa {
-      background: linear-gradient(135deg, #622774 0%, #c53364 100%);
-    }
-
-    [data-credit-card].is-mastercard {
-      background: linear-gradient(135deg, #65799b 0%, #5e2563 100%);
-    }
-
-    .is-visa [data-card-type],
-    .is-mastercard [data-card-type] {
-      width: auto;
-    }
-
-    input.is-invalid,
-    .is-invalid input {
-      text-decoration: line-through;
-    }
-
-    ::placeholder {
-      color: #fff;
-    }
-      
-    /* Add Your CSS From Here */
-	[data-cart-info] span {
-		display: inline-block;
-		vertical-align: middle;
-	}
-	[data-cart-info] .material-icons {
-		font-size:150px;
-	}
-	[data-credit-card] {
-		width: 435px;
-		min-height: 240px;
-		border-radius: 10px;
-		background: #5d6874;
-	}
-	[data-card-type] {
-		display:block;
-		width:120px;
-		height:60px;
-	}
-	[data-cc-digits] {
-		margin-top: 2em;
-	}
-	[data-cc-digits] input {
-		color: white;
-		font-size: 2em;
-		line-height:2em;
-		border:none;
-		background:none;
-		margin-right: 0.5em;
-	}
-	[data-cc-info] {
-		margin-top:1em;
-	}
-	[data-cc-info] input {
-		color: white;
-		font-size:1.2em;
-		border:none;
-		background:none;
-	}
-	[data-cc-info] input:nth-child(2) {
-		padding-right: 10px;
-		float:right;
-	}
-	[data-pay-btn] {
-		position: fixed;
-		width:90%;
-		border: 1px solid;
-		bottom:20px;
-	}
-    </style>
-  </head>
-  <body>
-    
-    <!-- your HTML goes here -->
-    <div data-cart-info="">
-		<h1 class="mdc-typography--headline4">
-			<span class="material-icons">shopping_cart</span>
-			<span data-bill=""></span>
-		<h1>
-	</div>
-	<div data-credit-card class="mdc-card mdc-card--outlined">
-		<div class="mdc-card__primary-action">
-			<img data-card-type src="http://placehold.it/120x60.png?text=Card" />
-			<div data-cc-digits>
-				<input type="text" size="4" placeholder="----" />
-				<input type="text" size="4" placeholder="----" />
-				<input type="text" size="4" placeholder="----" />
-				<input type="text" size="4" placeholder="----" />
-			</div>
-			<div data-cc-info="">
-				<input type="text" size="20" placeholder="Name Surname" />
-				<input type="text" size="6" placeholder="MM/YY" />
-			</div>
-		</div>
-	</div>
-	<button class="mdc-button" data-pay-btn>Pay Now</button>
-    <script>
-      
-      const supportedCards = {
-        visa, mastercard
-      };
-
-      const countries = [
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animated.css" />
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/about.css" />
+    <title>Cornfuse</title>
+    <!-- <script>
+        setInterval(() =>
         {
-          code: "US",
-          currency: "USD",
-          currencyName: '',
-          country: 'United States'
-        },
-        {
-          code: "NG",
-          currency: "NGN",
-          currencyName: '',
-          country: 'Nigeria'
-        },
-        {
-          code: 'KE',
-          currency: 'KES',
-          currencyName: '',
-          country: 'Kenya'
-        },
-        {
-          code: 'UG',
-          currency: 'UGX',
-          currencyName: '',
-          country: 'Uganda'
-        },
-        {
-          code: 'RW',
-          currency: 'RWF',
-          currencyName: '',
-          country: 'Rwanda'
-        },
-        {
-          code: 'TZ',
-          currency: 'TZS',
-          currencyName: '',
-          country: 'Tanzania'
-        },
-        {
-          code: 'ZA',
-          currency: 'ZAR',
-          currencyName: '',
-          country: 'South Africa'
-        },
-        {
-          code: 'CM',
-          currency: 'XAF',
-          currencyName: '',
-          country: 'Cameroon'
-        },
-        {
-          code: 'GH',
-          currency: 'GHS',
-          currencyName: '',
-          country: 'Ghana'
-        }
-      ];
-
-      const billHype = () => {
-        const billDisplay = document.querySelector('.mdc-typography--headline4');
-        if (!billDisplay) return;
-
-        billDisplay.addEventListener('click', () => {
-          const billSpan = document.querySelector("[data-bill]");
-          if (billSpan &&
-            appState.bill &&
-            appState.billFormatted &&
-            appState.billFormatted === billSpan.textContent) {
-            window.speechSynthesis.speak(
-              new SpeechSynthesisUtterance(appState.billFormatted)
-            );
-          }
+            console.clear();
         });
-      };
-      const appState = {};
+    </script> -->
+</head>
 
-	 const formatAsMoney = (amount, buyerCountry) => {
-		 const found = countries.filter(data => data.country == buyerCountry);
-		const [currence] = found;
-		return amount,toLocaleString(`en-${ currence.code } || 'US'`, {style: "currency", currency: currence.currency || 'USD'});
-	 }
-	 const flagifInValid = (field, inValid) => {
-		 isValid ? field.classList.remove('is-invalid') : fieldclassList.add('is-invalid');
-		return isValid;
-	 }
-	 const expiryDateFormatIsValid = (field) => {
-		 const value = field.value;
-		 return /^\d{1,2}\/\d{2}$/.test(value);
-	 }
-	 const detectCardType = (first4Digits) => {
+<body class="authentication-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="about-full col-12 px-0">
+                <nav class="navbar navbar-expand-lg our-nav col-12">
+                    <a class="navbar-brand" href="#">Cornfuse</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-	 }
-	 const validateCardExpiryDate = () => {
-		 const target = document.queerySelector('[data-cc-info] input;nth-child(2)');
-		 const value = target.value;
-		 let result - false;
-		 if(expiryDateFormatIsValid(target)) {
-			 const val = value.split('/');
-			 const currenceDate = new Date();
-			 const cardDate = new Date(`${20}${val[1]}-${val[0]}`);
-			 result = cardDate > currenceDate ? true : false;
-		 }
-		 return flagifInValid(target, result);
-	 }
-	 const validateCardHolderName = () => {
-		const testName = /^[a-zA-Z]{3,}[\s][a-zA-Z]{3,}$/;
-		const target = document.queerySelector('[data-cc-info] input:nth-child(1)');
-		const result = testName.test(target.value);
-		return flagifInValid(target, result);
-	 }
-	 const validateCardNumber = () => {
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="col-12 brief-message">
+                  <div class="col-3 we-are-cornfuse mx-auto text-center">
+                    <h4 class="col-12 mt-3">
+                      WELCOME TO
+                    </h4>
+                    <h1 class="col-12 cornfuse-big">
+                      CORNFUSE
+                    </h1>
+                  </div>
+                  <div class="col-8 cornfuse-message mx-auto text-center mt-4">
+                    <span class="">Gaming isn't just a hobby.</span>
+                  </div>
+                </div>
+                <div class="col-12 main row mx-0">
+                  <div class="col-8 about-us-con scroller mt-5">
+                    <h4 class="text-center">
+                      About Us
+                    </h4>
+                    <div class="col-10 mx-auto">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia delectus id laboriosam voluptates. Delectus necessitatibus aliquam culpa. Aut deleniti, minima repellendus eius labore ea nemo facere optio et necessitatibus obcaecati cumque commodi, magni minus eligendi. Magni ipsum dolores, possimus, fuga sequi similique sunt nostrum autem aliquam eius aliquid optio ut a sint, nemo commodi libero esse pariatur cupiditate vero illum vel expedita iste consectetur? Suscipit odit vero ullam impedit quasi enim ratione quia consequatur ipsa necessitatibus nam iusto maiores fugit eligendi delectus sed, beatae repudiandae alias quae commodi veniam? Fugit impedit, iste explicabo officiis necessitatibus, sit quas molestiae enim sint et incidunt aliquam eum! Id nulla ipsum voluptate? Quibusdam, amet. Doloribus aut repudiandae ullam ab iste vitae inventore porro quis natus! Asperiores tempora aliquid quos amet maxime. Adipisci saepe dicta similique voluptas optio? Fugit voluptatibus assumenda porro ab, exercitationem nostrum deleniti necessitatibus fuga aspernatur illo cupiditate minima, tempore alias sit. Non quos cumque et expedita nostrum possimus! Laborum exercitationem culpa laudantium. Doloremque similique adipisci cupiditate nesciunt. Ullam nostrum veritatis eaque eveniet aut quo sapiente totam, similique facilis possimus voluptatem quis velit libero, atque non omnis alias quam, illum est neque nihil tenetur quasi. Eum, natus, aut quo doloremque laborum animi voluptate dicta minima quis dignissimos mollitia ipsam corrupti impedit excepturi distinctio facere magnam reiciendis rerum earum doloribus repudiandae aliquid nesciunt sequi? Ullam cumque perspiciatis illo dicta et eum, saepe quos. Nesciunt ullam ipsam alias veritatis sapiente deserunt? Consequuntur sunt repudiandae amet ipsum itaque alias praesentium iste rerum voluptatem! Non voluptatum earum aut veniam officiis perferendis ea quo aliquam ducimus autem sed amet corporis facilis sunt unde laborum dolorum velit, eos adipisci tempore harum incidunt nulla porro iusto? Facilis reprehenderit ratione dolores excepturi aspernatur sapiente ab? Iste rerum ullam expedita sequi, ipsa facere omnis, quisquam sint a quasi blanditiis possimus ut!
+                    </div>
+                  </div>
+                  <div class="col-4 others-con mt-5">
+                    <div class="col-12 other-boxes meet-the-team my-4">
+                      <div class="col-8 mx-auto text-center">
+                        <span class="">MEET THE TEAM</span>
+                      </div>
+                    </div>
+                    <div class="col-12 other-boxes my-4">
 
-	 }
-	 const validatePayment = () => {
-		 validateCardNumber();
-		 validateCardHolderName();
-		 validateCardExpiryDate();
-	 }
-	 const smartInput = (event, fieldIndex) => {
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 
-	 }
-	 const uiCanInteract = () => {
-		 document.querySelector('[data-cc-digits] input:nth-child(1)').focus();
-		 document.querySelctor('[data-pay-btn]').addEventListener('click', validatePayment);
-	 }
-	 const displayCartTotal = ({results}) => {
-		 const [data] = results;
-		 const {itemsInCart, buyerCountry} = data;
-		 appState.items = itemsInCart;
-		 appState.country = buyerCountry;
-		 appState.bill = itemsInCart.reduce((sum, curr) => sum + (curr.qty * curr.price), 0);
-		 appState.billFormatted = formatAsMoney(appState.bill, appState.country);
-		 document.querySelector('[data-bill').textContent = appState.billFormatted;
-		 appState.cardDigits = [];
-		 uiCanInteract();
-	 }
-	
-	  const fetchBill = () => {
-        const apiHost = 'https://randomapi.com/api';
-		const apiKey = '006b08a801d82d0c9824dcfdfdfa3b3c';
-		const apiEndpoint = `${apiHost}/${apiKey}`;
-		fetch(apiEndpoint)
-		.then(response =. response.json())
-		.then(data => displayCartTotal(data))
-		.catch(error => console.log(error));
-        
-      };
-      
-      const startApp = () => {
-		  fetchBill();
-      };
-
-      startApp();
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
     </script>
-  </body>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script src="js/welcome.js"></script>
+<!-- <script>
+    var item_0 = document.getElementById("game-value-0");
+
+    console.log(item_0);
+    let obj = {};
+    function removeLi()
+    {
+        const attr = item_0.dataset.valId;
+        console.log(attr);
+        item_0.parentNode.removeChild(item_0);
+    }
+    removeLi();
+    function appendLi()
+    {
+        var list = document.getElementById("game-value-box-0");
+        list.appendChild(item_0);
+    }
+    setTimeout(() =>
+    {
+        appendLi();
+    }, 5000);
+
+</script> -->
+
 </html>

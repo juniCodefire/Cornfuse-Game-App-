@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/animated.css" />
@@ -49,46 +50,209 @@
                 </nav>
                 <div class="index-body col-12 row px-0 mx-0">
                     <div class="col-5 leaderboards">
-                        <div class="col-11 mx-auto border lead-con">
-                            <!-- <div class="col-12">
+                        <div class="col-11 mx-auto lead-con">
+                            <div class="col-12">
                                 <h4 class="color-white">Leaderboards</h4>
                             </div>
                             <div class="lead-list col-12 px-0">
-                                <div class="row mx-0 border lead-header">
-                                    <div class="col-2 border-right">
-                                        <span>#</span>
+                                <div class="lead-header col-12 row mx-0">
+                                    <div class="col-2 lead-header-rank px-0">
+                                        <h6 class="mt-3">RANK</h6>
                                     </div>
-                                    <div class="col-2 border-right head-user-image">
-
+                                    <div class="col-7 lead-header-user">
+                                        <h6 class="text-center mt-3">PLAYER</h6>
                                     </div>
-                                    <div class="col-5 border-right head-user-name text-center">
-                                        <span>User</span>
-                                    </div>
-                                    <div class="col-3 head-user-score">
-                                        <span>Score</span>
+                                    <div class="col-3 lead-header-score">
+                                        <h6 class="mt-3 text-center">SCORE</h6>
                                     </div>
                                 </div>
-                                <div class="overall-stat col-12 px-0 border-bottom">
-                                    <div class="individual-stat col-12 mx-0 mt-1 px-0 row border-bottom">
-                                        <div class="col-2 overall-user-rank text-center">
-                                            <span class="mt-4">1</span>
+                                <!-- Stats for everybody in descending order -->
+                                <div class="overall-stats scroller col-12 px-0">
+                                    <div class="individual-stat col-12 row mx-0 mt-1">
+                                        <div class="user-rank col-2">
+                                            <h4 class="mt-2">#1</h4>
                                         </div>
-                                        <div class="col-2 overall-user-image">
-                                            <img src="images/cornfuse_white.jpg" alt="">
-    
+                                        <div class="user-data row mx-0 col-7 px-0">
+                                            <div class="col-3 user-image px-0 text-center">
+                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
+                                            </div>
+                                            <div class="col-9 user-name px-0">
+                                                <div class="col-12 mt-2">
+                                                    <span class="actual-name-span">jamiegamer</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-5 overall-user-name text-center">
-                                            <span>Username</span>
+                                        <div class="col-3 user-score">
+                                            <h4 class="text-center mt-2">1095</h4>
                                         </div>
-                                        <div class="col-3 overall-user-score">
-                                            <span>1495</span>
+                                    </div>
+                                    <div class="individual-stat col-12 row mx-0 mt-1">
+                                        <div class="user-rank col-2">
+                                            <h4 class="mt-2">#1</h4>
+                                        </div>
+                                        <div class="user-data row mx-0 col-7 px-0">
+                                            <div class="col-3 user-image px-0 text-center">
+                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
+                                            </div>
+                                            <div class="col-9 user-name px-0">
+                                                <div class="col-12 mt-2">
+                                                    <span class="actual-name-span">jamiegamer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 user-score">
+                                            <h4 class="text-center mt-2">1095</h4>
+                                        </div>
+                                    </div>
+                                    <div class="individual-stat col-12 row mx-0 mt-1">
+                                        <div class="user-rank col-2">
+                                            <h4 class="mt-2">#1</h4>
+                                        </div>
+                                        <div class="user-data row mx-0 col-7 px-0">
+                                            <div class="col-3 user-image px-0 text-center">
+                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
+                                            </div>
+                                            <div class="col-9 user-name px-0">
+                                                <div class="col-12 mt-2">
+                                                    <span class="actual-name-span">jamiegamer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 user-score">
+                                            <h4 class="text-center mt-2">1095</h4>
+                                        </div>
+                                    </div>
+                                    <div class="individual-stat col-12 row mx-0 mt-1">
+                                        <div class="user-rank col-2">
+                                            <h4 class="mt-2">#1</h4>
+                                        </div>
+                                        <div class="user-data row mx-0 col-7 px-0">
+                                            <div class="col-3 user-image px-0 text-center">
+                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
+                                            </div>
+                                            <div class="col-9 user-name px-0">
+                                                <div class="col-12 mt-2">
+                                                    <span class="actual-name-span">jamiegamer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 user-score">
+                                            <h4 class="text-center mt-2">1095</h4>
+                                        </div>
+                                    </div>
+                                    <div class="individual-stat col-12 row mx-0 mt-1">
+                                        <div class="user-rank col-2">
+                                            <h4 class="mt-2">#1</h4>
+                                        </div>
+                                        <div class="user-data row mx-0 col-7 px-0">
+                                            <div class="col-3 user-image px-0 text-center">
+                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
+                                            </div>
+                                            <div class="col-9 user-name px-0">
+                                                <div class="col-12 mt-2">
+                                                    <span class="actual-name-span">jamiegamer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 user-score">
+                                            <h4 class="text-center mt-2">1095</h4>
+                                        </div>
+                                    </div>
+                                    <div class="individual-stat col-12 row mx-0 mt-1">
+                                        <div class="user-rank col-2">
+                                            <h4 class="mt-2">#1</h4>
+                                        </div>
+                                        <div class="user-data row mx-0 col-7 px-0">
+                                            <div class="col-3 user-image px-0 text-center">
+                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
+                                            </div>
+                                            <div class="col-9 user-name px-0">
+                                                <div class="col-12 mt-2">
+                                                    <span class="actual-name-span">jamiegamer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 user-score">
+                                            <h4 class="text-center mt-2">1095</h4>
+                                        </div>
+                                    </div>
+                                    <div class="individual-stat col-12 row mx-0 mt-1">
+                                        <div class="user-rank col-2">
+                                            <h4 class="mt-2">#1</h4>
+                                        </div>
+                                        <div class="user-data row mx-0 col-7 px-0">
+                                            <div class="col-3 user-image px-0 text-center">
+                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
+                                            </div>
+                                            <div class="col-9 user-name px-0">
+                                                <div class="col-12 mt-2">
+                                                    <span class="actual-name-span">jamiegamer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 user-score">
+                                            <h4 class="text-center mt-2">1095</h4>
+                                        </div>
+                                    </div>
+                                    <div class="individual-stat col-12 row mx-0 mt-1">
+                                        <div class="user-rank col-2">
+                                            <h4 class="mt-2">#1</h4>
+                                        </div>
+                                        <div class="user-data row mx-0 col-7 px-0">
+                                            <div class="col-3 user-image px-0 text-center">
+                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
+                                            </div>
+                                            <div class="col-9 user-name px-0">
+                                                <div class="col-12 mt-2">
+                                                    <span class="actual-name-span">jamiegamer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 user-score">
+                                            <h4 class="text-center mt-2">1095</h4>
+                                        </div>
+                                    </div>
+                                    <div class="individual-stat col-12 row mx-0 mt-1">
+                                        <div class="user-rank col-2">
+                                            <h4 class="mt-2">#1</h4>
+                                        </div>
+                                        <div class="user-data row mx-0 col-7 px-0">
+                                            <div class="col-3 user-image px-0 text-center">
+                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
+                                            </div>
+                                            <div class="col-9 user-name px-0">
+                                                <div class="col-12 mt-2">
+                                                    <span class="actual-name-span">jamiegamer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 user-score">
+                                            <h4 class="text-center mt-2">1095</h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="user-stat border mt-1">
-
-                            </div> -->
+                            <!--The users stats appear here for quick access -->
+                            <div class="user-stat mt-1">
+                                <div class="individual-stat col-12 row mx-0">
+                                    <div class="user-rank col-2">
+                                        <h4 class="mt-2">#1</h4>
+                                    </div>
+                                    <div class="user-data row mx-0 col-7 px-0">
+                                        <div class="col-3 user-image px-0 text-center">
+                                            <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
+                                        </div>
+                                        <div class="col-9 user-name px-0">
+                                            <div class="col-12 mt-2">
+                                                <span class="actual-name-span">jamiegamer</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 user-score">
+                                        <h4 class="text-center mt-2">1095</h4>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-7">
@@ -238,10 +402,10 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-</script>
+    </script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
-</script>
+    </script>
 <script src="js/wow.min.js"></script>
 <script>
     new WOW().init();
