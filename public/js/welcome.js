@@ -1,9 +1,21 @@
 const cards = Array.from(document.querySelectorAll('[data-game-brand] [data-game-holder]'));
+//leaderBoxesholder
+const firstLeaderPlayerBox = document.querySelector('[data-first-leader]');
+const currentPlayerBox = document.querySelector('[data-current-player]');
+//get the Ranks of the Leader board
+const currentPlayerRank = document.querySelector('[data-current-player] div:nth-child(1) h4');
+const firstLeaderPlayerRank = document.querySelector('[data-first-leader] div:nth-child(1) h4');
+const secondLeaderPlayerRank = document.querySelector('[data-second-leader] div:nth-child(1) h4');
+//get the player
+const currentPlayer = document.querySelector('[data-current-player] div:nth-child(2) div:nth-child(2) span');
+const firstLeaderPlayer = document.querySelector('[data-first-leader] div:nth-child(2) div:nth-child(2) span');
+const secondLeaderPlayer = document.querySelector('[data-second-leader] div:nth-child(2) div:nth-child(2) span');
+//get the player score
+const currentPlayerScore = document.querySelector('[data-current-player] div:nth-child(3)  h4');
+const firstLeaderPlayerScore = document.querySelector('[data-first-leader]  div:nth-child(3) h4');
+const secondLeaderPlayerScore = document.querySelector('[data-second-leader] div:nth-child(3) h4');
 
-console.log(cards);
-// cardValue = {
-//     0: ""
-// }
+let trap = 1;
 
 const animCard_1 = (card_cover, i) => {
     setTimeout(() => {
@@ -30,8 +42,7 @@ const animCard_2 = (card_cover, i) => {
 const animCard_3 = (card_cover, i) => {
     setTimeout(() => {
         if (i === 2) {
-            card_cover.classList.add('flip-card-inner_transform');
-            // card.style.transition = "1s all ease";
+            card_cover.classList.add('flip-card-inner_transform')
         }
     }, 7300);
 
@@ -79,6 +90,9 @@ const animManipualate_1 = (cards) => {
         cards[4].classList.remove('error_choice');
         cards[0].classList.remove('animated', 'shake');
         cards[4].classList.remove('animated', 'shake');
+        trap == 1 ? firstLeaderPlayerBox.classList.remove('animated', 'slideInLeft') : null;
+        trap == 1 ? currentPlayerBox.classList.remove('animated', 'fadeIn') : null;
+        trap = 0;
         notify_div.style.display = "none";
         notify_text.innerHTML = '';
     }, 3000);
@@ -101,6 +115,7 @@ const animManipualate_2 = (cards) => {
     notify_div.style.display = "block";
     notify_div.style.color = "lime";
     notify_text.innerHTML = 'You Won!';
+    switchLeaderBoard(duty = 'add');
 
 
     //Pop out a You lost Modal on the screen
@@ -118,15 +133,13 @@ const animManipualate_2 = (cards) => {
         notify_div.style.color = "tomato";
         notify_text.innerHTML = '';
         point_number.innerHTML = "100pt";
+        switchLeaderBoard(duty = 'remove');
     }, 3000);
 }
-
 
 const animationMaster = (cards) => {
     cards.map((card, i) => {
         const card_cover = document.querySelector(`[data-game-cover-${ i }]`);
-        const card_value = document.querySelector(`#game-value-${ i }`);
-        console.log(card_value);
 
         animCard_1(card_cover, i);
         animCard_2(card_cover, i);
@@ -143,6 +156,62 @@ setInterval(() => {
 }, 14000);
 animationMaster(cards);
 
+switchLeaderBoard = (duty) => {
+    //replace the first position to jammiegamer
+    //fade in the rank
+    if (duty == 'add') {
+        firstLeaderPlayerRank.classList.add('animated', 'fadeIn');
+        //the  username
+        firstLeaderPlayer.textContent = 'jamiegamer';
+        firstLeaderPlayer.classList.add("animated", 'fadeIn');
+        //the scoreupdaate 
+        firstLeaderPlayerScore.textContent = `6550`;
+        firstLeaderPlayerScore.classList.add("animated", 'fadeIn');
+        //Animate First leader box Holder
+        firstLeaderPlayerBox.classList.add('animated', 'flash');
+        //replace the second position
+        secondLeaderPlayerRank.classList.add('animated', 'fadeIn');
+        //the username 
+        secondLeaderPlayer.textContent = 'trancybnks';
+        secondLeaderPlayer.classList.add("animated", 'fadeIn');
+        //the score update
+        secondLeaderPlayerScore.textContent = '6500';
+        secondLeaderPlayerScore.classList.add("animated", 'fadeIn');
 
+        //replace the currrent player status
+        currentPlayerRank.textContent = '#1';
+        currentPlayerScore.classList.add('animated', 'fadeIn');
 
-console.log('confuse App');
+        currentPlayerScore.textContent = `6550`;
+        currentPlayerScore.classList.add('animated', 'fadein');
+        currentPlayerBox.classList.add('animated', 'pulse');
+    } else if (duty == 'remove') {
+        firstLeaderPlayerRank.classList.remove('animated', 'fadeIn');
+        //the  username
+        firstLeaderPlayer.textContent = 'trancybnks';
+        firstLeaderPlayer.classList.remove("animated", 'fadeIn');
+        //the scoreupdaate 
+        firstLeaderPlayerScore.textContent = `6500`;
+        firstLeaderPlayerScore.classList.remove("animated", 'fadeIn');
+
+        firstLeaderPlayerBox.classList.remove('animated', 'flash');
+
+        //replace the second position
+        secondLeaderPlayerRank.classList.remove('animated', 'fadeIn');
+        //the username 
+        secondLeaderPlayer.textContent = 'jamiegamer';
+        secondLeaderPlayer.classList.remove("animated", 'fadeIn');
+        //the score update
+        secondLeaderPlayerScore.textContent = '6550';
+        secondLeaderPlayerScore.classList.remove("animated", 'fadeIn');
+
+        //replace the currrent player status
+        currentPlayerRank.textContent = '#2';
+        currentPlayerScore.classList.remove('animated', 'fadeIn');
+        currentPlayerBox.classList.remove('animated', 'pulse');
+
+        currentPlayerScore.textContent = `6450`;
+        currentPlayerScore.classList.remove('animated', 'fadein');
+    }
+
+}

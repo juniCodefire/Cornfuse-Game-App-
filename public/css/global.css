@@ -1,25 +1,32 @@
-.scroller{
+.scroller {
   overflow-y: scroll;
+  overflow-x: hidden;
 }
+
 .scroller::-webkit-scrollbar {
   width: 4px;
 }
+
 .scroller::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   display: none;
 }
+
 .scroller::-webkit-scrollbar-thumb {
   color: black;
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px #343a40;
 }
+
 .color-white {
   color: white;
 }
-.our-nav{
-  background: rgba(0,0,0,0.5);
+
+.our-nav {
+  background: rgba(0, 0, 0, 0.5);
 }
+
 /* Card animation */
 .cards {
   background-color: transparent;
@@ -57,4 +64,142 @@
 
 .card-value {
   transform: rotateY(180deg);
+}
+
+.cornfuse-logo-style {
+  width: 30%;
+}
+
+.cornfuse-logo-style div:nth-child(1) {
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  top: -10px;
+  left: 50px;
+}
+
+.cornfuse-logo-style img {
+  width: 100%;
+  transform: scale(2)
+    /* height: 60%; */
+}
+
+
+.play_game {
+  position: absolute;
+  left: 50%;
+  color: white;
+  border: 1px solid #781c4e;
+  padding: 10px;
+  margin-left: -50px;
+  border-radius: 50px;
+  padding-right: 35px;
+  padding-left: 35px;
+  font-size: 20px;
+  font-family: 'Ma Shan Zheng', cursive;
+  cursor: pointer;
+
+}
+
+.play_game span {
+  color: lime;
+  transition: transform 0.6s;
+  text-shadow: 1px 1px 1px black;
+  letter-spacing: 0.3em;
+  display: inline-block;
+}
+
+.play_game:hover span:nth-child(1) {
+  transform: translateY(-2px) rotate(5deg) scale(1.2);
+  color: hotpink;
+}
+
+.play_game:hover span:nth-child(2) {
+  transform: translateY(2px) rotate(-5deg) scale(1.2);
+  color: hotpink;
+  order: -1;
+}
+
+
+#navbarSupportedContent {
+  width: 70%;
+}
+
+#navbarSupportedContent ul {
+  width: 95%;
+  margin: 0 auto;
+  text-align: right;
+  display: block;
+}
+
+#navbarSupportedContent ul li {
+  display: inline-block !important;
+  text-align: right;
+}
+
+#navbarSupportedContent a {
+  font-size: 20px;
+}
+
+.cornfuse-menu-bar {
+  width: 68%;
+  height: 68%;
+  cursor: pointer;
+}
+
+.menu-btn {
+  padding: 0;
+}
+
+.menu-btn:focus {
+  outline: none;
+}
+.masking {
+  position: relative;
+  display: block;
+  background: ;
+}
+.mirage {
+  position: absolute;
+  background: green;
+  top: 0;
+  left: 0;
+  height: 20px;
+  overflow: hidden;
+}
+.alive {
+  position: absolute;
+  background: blue;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  overflow: hidden;
+}
+/* .mirage_links {
+  color: lime !important;
+  position: absolute;
+  top: 15px;
+} */
+
+@media(max-width:991px) {
+  #navbarSupportedContent {
+    position: absolute;
+    background: linear-gradient(-45deg, #781c4e, indigo, #29111e);
+    z-index: 99999;
+    padding: 0;
+    width: 100%;
+    top: 62px;
+    left: 0;
+  }
+
+  #navbarSupportedContent ul {
+    text-align: left;
+  }
+
+  #navbarSupportedContent ul li {
+    display: inline-block !important;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
