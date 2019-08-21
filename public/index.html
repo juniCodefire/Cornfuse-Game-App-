@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/animated.css" />
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/style.css" />
@@ -26,31 +28,73 @@
 </head>
 
 <body class="authentication-body">
+  
     <div class="container-fluid">
         <div class="row">
             <div class="index-full col-12 px-0">
                 <nav class="navbar navbar-expand-lg our-nav col-12">
-                    <a class="navbar-brand" href="#">Cornfuse</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    <div class="play_game">
+                        <span>PLAY</span>
+                        <span>GAME</span>
+                    </div>
+                    <div class="cornfuse-logo-style">
+                        <div><a class="navbar-brand" href="#"><img src="images/cornfuse-lite.png" /></a></div>
+                    </div>
+                    <button class="navbar-toggler menu-btn" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <img class="cornfuse-menu-bar" src="images/cornfuse_menu.png" alt="Menu">
+                        <!-- <span class="navbar-toggler-icon"></span> -->
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <ul class="navbar-nav mr-auto game-text-family">
+                            <li class="nav-item active familia" style="padding-left: 0;">
+                                <a class="nav-link" href="#">
+                                    <div class="masking1">
+                                       <span class="up">Home</span>
+                                    </div>
+                                    <div class="masking2">
+                                        <span class="down">Home</span>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                             <li class="nav-item familia" style="padding-left: 0;">
+                                <a class="nav-link" href="/about.html">
+                                    <div class="masking1">
+                                       <span class="up">About</span>
+                                    </div>
+                                    <div class="masking2">
+                                        <span class="down">About</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item familia contact" style="padding-left: 0;">
+                                <a class="nav-link" href="/contact.html">
+                                    <div class="masking1" style="width: 80px;">
+                                       <span class="up">Contact</span>
+                                    </div>
+                                    <div class="masking2" style="width: 80px;">
+                                        <span class="down">Contact</span>
+                                    </div>
+                                </a>
+                            </li>
+                          <li class="nav-item familia" style="padding-left: 0;">
+                                <a class="nav-link" href="/teams.html">
+                                    <div class="masking1" style="width: 80px;">
+                                       <span class="up">Teams</span>
+                                    </div>
+                                    <div class="masking2" style="width: 80px;">
+                                        <span class="down">Teams</span>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </nav>
                 <div class="index-body col-12 row px-0 mx-0">
                     <div class="col-5 leaderboards">
-                        <div class="col-11 mx-auto lead-con">
+                        <div class="col-11 mx-auto lead-con game-text-family">
                             <div class="col-12">
                                 <h4 class="color-white">Leaderboards</h4>
                             </div>
@@ -67,10 +111,30 @@
                                     </div>
                                 </div>
                                 <!-- Stats for everybody in descending order -->
-                                <div class="overall-stats scroller col-12 px-0">
-                                    <div class="individual-stat col-12 row mx-0 mt-1">
+                                <div class="overall-stats col-12 px-0">
+                                    <div class="list-animation-duration individual-stat col-12 row mx-0 mt-1 animated fadeInLeft"
+                                        data-first-leader>
                                         <div class="user-rank col-2">
-                                            <h4 class="mt-2">#1</h4>
+                                            <h4 class="mt-2 cornfuse-first-leader">#1</h4>
+                                        </div>
+                                        <div class="user-data row mx-0 col-7 px-0">
+                                            <div class="col-3 user-image px-0 text-center">
+                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
+                                            </div>
+                                            <div class="col-9 user-name px-0">
+                                                <div class="col-12 mt-2">
+                                                    <span class="actual-name-span">trancybnks</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 user-score">
+                                            <h4 class="text-center mt-2">6500</h4>
+                                        </div>
+                                    </div>
+                                    <div style="animation-duration:0.1s; animation-delay:0.1s"class="individual-stat col-12 row mx-0 mt-1 animated fadeInLeft"
+                                        data-second-leader>
+                                        <div class="user-rank col-2">
+                                            <h4 class="mt-2 cornfuse-first-leader">#2</h4>
                                         </div>
                                         <div class="user-data row mx-0 col-7 px-0">
                                             <div class="col-3 user-image px-0 text-center">
@@ -83,12 +147,12 @@
                                             </div>
                                         </div>
                                         <div class="col-3 user-score">
-                                            <h4 class="text-center mt-2">1095</h4>
+                                            <h4 class="text-center mt-2">6450</h4>
                                         </div>
                                     </div>
-                                    <div class="individual-stat col-12 row mx-0 mt-1">
+                                    <div style="animation-duration:0.1s; animation-delay:0.2s"class="individual-stat col-12 row mx-0 mt-1 animated fadeInLeft">
                                         <div class="user-rank col-2">
-                                            <h4 class="mt-2">#1</h4>
+                                            <h4 class="mt-2 cornfuse-first-leader">#3</h4>
                                         </div>
                                         <div class="user-data row mx-0 col-7 px-0">
                                             <div class="col-3 user-image px-0 text-center">
@@ -96,7 +160,79 @@
                                             </div>
                                             <div class="col-9 user-name px-0">
                                                 <div class="col-12 mt-2">
-                                                    <span class="actual-name-span">jamiegamer</span>
+                                                    <span class="actual-name-span">cross2000</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 user-score">
+                                            <h4 class="text-center mt-2">4095</h4>
+                                        </div>
+                                    </div>
+                                    <div style="animation-duration:0.1s; animation-delay:0.3s"class="individual-stat col-12 row mx-0 mt-1  animated fadeInLeft">
+                                        <div class="user-rank col-2">
+                                            <h4 class="mt-2">#4</h4>
+                                        </div>
+                                        <div class="user-data row mx-0 col-7 px-0">
+                                            <div class="col-3 user-image px-0 text-center">
+                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
+                                            </div>
+                                            <div class="col-9 user-name px-0">
+                                                <div class="col-12 mt-2">
+                                                    <span class="actual-name-span">sky</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 user-score">
+                                            <h4 class="text-center mt-2">3395</h4>
+                                        </div>
+                                    </div>
+                                    <div style="animation-duration:0.1s; animation-delay:0.4s"class="individual-stat col-12 row mx-0 mt-1  animated fadeInLeft">
+                                        <div class="user-rank col-2">
+                                            <h4 class="mt-2">#5</h4>
+                                        </div>
+                                        <div class="user-data row mx-0 col-7 px-0">
+                                            <div class="col-3 user-image px-0 text-center">
+                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
+                                            </div>
+                                            <div class="col-9 user-name px-0">
+                                                <div class="col-12 mt-2">
+                                                    <span class="actual-name-span">blazycorrie</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 user-score">
+                                            <h4 class="text-center mt-2">2055</h4>
+                                        </div>
+                                    </div>
+                                    <div style="animation-duration:0.1s; animation-delay:0.5s"class="individual-stat col-12 row mx-0 mt-1  animated fadeInLeft">
+                                        <div class="user-rank col-2">
+                                            <h4 class="mt-2">#6</h4>
+                                        </div>
+                                        <div class="user-data row mx-0 col-7 px-0">
+                                            <div class="col-3 user-image px-0 text-center">
+                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
+                                            </div>
+                                            <div class="col-9 user-name px-0">
+                                                <div class="col-12 mt-2">
+                                                    <span class="actual-name-span">chris</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 user-score">
+                                            <h4 class="text-center mt-2">2000</h4>
+                                        </div>
+                                    </div>
+                                    <div style="animation-duration:0.1s; animation-delay:0.6s"class="individual-stat col-12 row mx-0 mt-1  animated fadeInLeft">
+                                        <div class="user-rank col-2">
+                                            <h4 class="mt-2">#7</h4>
+                                        </div>
+                                        <div class="user-data row mx-0 col-7 px-0">
+                                            <div class="col-3 user-image px-0 text-center">
+                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
+                                            </div>
+                                            <div class="col-9 user-name px-0">
+                                                <div class="col-12 mt-2">
+                                                    <span class="actual-name-span">cemma</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -104,9 +240,9 @@
                                             <h4 class="text-center mt-2">1095</h4>
                                         </div>
                                     </div>
-                                    <div class="individual-stat col-12 row mx-0 mt-1">
+                                    <div style="animation-duration:0.1s; animation-delay:0.7s"class="individual-stat col-12 row mx-0 mt-1  animated fadeInLeft">
                                         <div class="user-rank col-2">
-                                            <h4 class="mt-2">#1</h4>
+                                            <h4 class="mt-2">#8</h4>
                                         </div>
                                         <div class="user-data row mx-0 col-7 px-0">
                                             <div class="col-3 user-image px-0 text-center">
@@ -114,115 +250,7 @@
                                             </div>
                                             <div class="col-9 user-name px-0">
                                                 <div class="col-12 mt-2">
-                                                    <span class="actual-name-span">jamiegamer</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3 user-score">
-                                            <h4 class="text-center mt-2">1095</h4>
-                                        </div>
-                                    </div>
-                                    <div class="individual-stat col-12 row mx-0 mt-1">
-                                        <div class="user-rank col-2">
-                                            <h4 class="mt-2">#1</h4>
-                                        </div>
-                                        <div class="user-data row mx-0 col-7 px-0">
-                                            <div class="col-3 user-image px-0 text-center">
-                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
-                                            </div>
-                                            <div class="col-9 user-name px-0">
-                                                <div class="col-12 mt-2">
-                                                    <span class="actual-name-span">jamiegamer</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3 user-score">
-                                            <h4 class="text-center mt-2">1095</h4>
-                                        </div>
-                                    </div>
-                                    <div class="individual-stat col-12 row mx-0 mt-1">
-                                        <div class="user-rank col-2">
-                                            <h4 class="mt-2">#1</h4>
-                                        </div>
-                                        <div class="user-data row mx-0 col-7 px-0">
-                                            <div class="col-3 user-image px-0 text-center">
-                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
-                                            </div>
-                                            <div class="col-9 user-name px-0">
-                                                <div class="col-12 mt-2">
-                                                    <span class="actual-name-span">jamiegamer</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3 user-score">
-                                            <h4 class="text-center mt-2">1095</h4>
-                                        </div>
-                                    </div>
-                                    <div class="individual-stat col-12 row mx-0 mt-1">
-                                        <div class="user-rank col-2">
-                                            <h4 class="mt-2">#1</h4>
-                                        </div>
-                                        <div class="user-data row mx-0 col-7 px-0">
-                                            <div class="col-3 user-image px-0 text-center">
-                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
-                                            </div>
-                                            <div class="col-9 user-name px-0">
-                                                <div class="col-12 mt-2">
-                                                    <span class="actual-name-span">jamiegamer</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3 user-score">
-                                            <h4 class="text-center mt-2">1095</h4>
-                                        </div>
-                                    </div>
-                                    <div class="individual-stat col-12 row mx-0 mt-1">
-                                        <div class="user-rank col-2">
-                                            <h4 class="mt-2">#1</h4>
-                                        </div>
-                                        <div class="user-data row mx-0 col-7 px-0">
-                                            <div class="col-3 user-image px-0 text-center">
-                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
-                                            </div>
-                                            <div class="col-9 user-name px-0">
-                                                <div class="col-12 mt-2">
-                                                    <span class="actual-name-span">jamiegamer</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3 user-score">
-                                            <h4 class="text-center mt-2">1095</h4>
-                                        </div>
-                                    </div>
-                                    <div class="individual-stat col-12 row mx-0 mt-1">
-                                        <div class="user-rank col-2">
-                                            <h4 class="mt-2">#1</h4>
-                                        </div>
-                                        <div class="user-data row mx-0 col-7 px-0">
-                                            <div class="col-3 user-image px-0 text-center">
-                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
-                                            </div>
-                                            <div class="col-9 user-name px-0">
-                                                <div class="col-12 mt-2">
-                                                    <span class="actual-name-span">jamiegamer</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-3 user-score">
-                                            <h4 class="text-center mt-2">1095</h4>
-                                        </div>
-                                    </div>
-                                    <div class="individual-stat col-12 row mx-0 mt-1">
-                                        <div class="user-rank col-2">
-                                            <h4 class="mt-2">#1</h4>
-                                        </div>
-                                        <div class="user-data row mx-0 col-7 px-0">
-                                            <div class="col-3 user-image px-0 text-center">
-                                                <img class="border mt-1" src="images/cornfuse_black.jpg" alt="">
-                                            </div>
-                                            <div class="col-9 user-name px-0">
-                                                <div class="col-12 mt-2">
-                                                    <span class="actual-name-span">jamiegamer</span>
+                                                    <span class="actual-name-span">junifire</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -234,9 +262,9 @@
                             </div>
                             <!--The users stats appear here for quick access -->
                             <div class="user-stat mt-1">
-                                <div class="individual-stat col-12 row mx-0">
+                                <div class="individual-stat col-12 row mx-0 animated fadeIn" data-current-player>
                                     <div class="user-rank col-2">
-                                        <h4 class="mt-2">#1</h4>
+                                        <h4 class="mt-2">#2</h4>
                                     </div>
                                     <div class="user-data row mx-0 col-7 px-0">
                                         <div class="col-3 user-image px-0 text-center">
@@ -249,19 +277,20 @@
                                         </div>
                                     </div>
                                     <div class="col-3 user-score">
-                                        <h4 class="text-center mt-2">1095</h4>
+                                        <h4 class="text-center mt-2">6450</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-7">
+                    <div class="col-7 animated fadeIn">
                         <div class="col-12 row">
                             <p class="cornfuse-player col-6">Player: jamiegamer</p>
                             <p class="cornfuse-point col-6">Points: <span class="point-number">100pt</span></p>
                         </div>
                         <div class="carousel-holder col-11 mx-auto carousel-modify ">
-                            <div id="indicators" class="carousel slide" data-ride="">
+                            <div id="indicators" class="carousel slide" data-ride=""
+                                style="position: static !important;">
                                 <ol class="carousel-indicators">
                                     <li data-target="#indicators" data-slide-to="0" class="active"></li>
                                     <li data-target="#indicators" data-slide-to="1"></li>
@@ -381,11 +410,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a class="carousel-control-prev" href="#indicators" role="button" data-slide="prev">
+                                <a class="carousel-control-prev" href="#indicators" role="button" data-slide="prev"
+                                    style="width: auto !important;">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" href="#indicators" role="button" data-slide="next">
+                                <a class="carousel-control-next" href="#indicators" role="button" data-slide="next"
+                                    style="width: auto !important;">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
                                 </a>
@@ -402,10 +433,10 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-    </script>
+</script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
-    </script>
+</script>
 <script src="js/wow.min.js"></script>
 <script>
     new WOW().init();
@@ -413,7 +444,6 @@
 <script src="js/welcome.js"></script>
 <!-- <script>
     var item_0 = document.getElementById("game-value-0");
-
     console.log(item_0);
     let obj = {};
     function removeLi()
@@ -432,7 +462,6 @@
     {
         appendLi();
     }, 5000);
-
 </script> -->
 
 </html>
