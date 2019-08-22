@@ -1,0 +1,54 @@
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
+.our-nav a {
+    color: white;
+}
+.about-full{
+    background-color: #e3dfdb;
+    min-height: 100vh;
+}
+.brief-message{
+    min-height: 40vh;
+}
+.we-are-cornfuse{
+    border: 5px solid black;
+    height: 20vh;
+    margin-top: 20vh;
+}
+.cornfuse-big{
+    font-weight: bold;
+    font-size: 50px;
+}
+.cornfuse-message span{
+    font-size: 20px;
+}
+.main{
+    height: 80vh;
+}
+.about-us-con{
+    height: 70vh;
+}
+.others-con{
+    height: 70vh;
+}
+.other-boxes{
+    height: 30vh;
+    border: 1px solid white;
+}
+.meet-the-team{
+    padding-top: 10vh; 
+    border-radius: 5px;
+    background-image: url("../images/team.jpg");
+    background-size: cover;
+    background-position: center; 
+}
+.meet-the-team div{
+    padding-top: 2vh;
+    height: 10vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+.meet-the-team div span{
+    font-size: 26px;
+}
