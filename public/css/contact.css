@@ -1,0 +1,19 @@
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
+.contact-full{
+    min-height: 100vh;
+    background-color: #e3dfdb;
+}
+.contact-header h3{
+    border-bottom: 3px solid black;
+}
+.contact-con{
+    height: 80vh;
+}
+.map-location-con{
+    height: 70%;
+}
+.contact-us-details{
+    height: 30%;
+}

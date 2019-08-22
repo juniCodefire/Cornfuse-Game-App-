@@ -27,8 +27,20 @@
 
 .our-nav {
   background: rgba(0, 0, 0, 0.5);
+  height: 8vh;
 }
-
+.our-nav a {
+  color: white;
+}
+.border-black{
+  border: 1px solid black;
+}
+.border-right-black{
+  border-right: 1px solid black;
+}
+.border-bottom-black{
+  border-bottom: 1px solid black;
+}
 /* Card animation */
 .cards {
   background-color: transparent;
