@@ -1,9 +1,6 @@
 body{
     font-family: 'Titillium Web', sans-serif;
 }
-.our-nav a {
-    color: white;
-}
 .about-full{
     background-color: #e3dfdb;
     min-height: 100vh;
