@@ -16,7 +16,9 @@ body{
 }
 .member-photo{
     height: 30vh;
-    border: 1px solid black;
+}
+.member-photo div{
+    height: 100%;
 }
 .member-data{
     height: 10vh;
