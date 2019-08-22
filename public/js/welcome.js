@@ -90,7 +90,7 @@ const animManipualate_1 = (cards) => {
         cards[4].classList.remove('error_choice');
         cards[0].classList.remove('animated', 'shake');
         cards[4].classList.remove('animated', 'shake');
-        trap == 1 ? firstLeaderPlayerBox.classList.remove('animated', 'slideInLeft') : null;
+        trap == 1 ? firstLeaderPlayerBox.classList.remove('animated', 'fadeInLeft', 'list-animation-duration') : null;
         trap == 1 ? currentPlayerBox.classList.remove('animated', 'fadeIn') : null;
         trap = 0;
         notify_div.style.display = "none";

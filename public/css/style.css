@@ -53,10 +53,10 @@ body {
     width: 100%;
     background-color: white;
     position: absolute;
-    z-index: 2;
     border-radius: 5px;
     display: table;
     background-color: #35092e;
+    backface-visibility: hidden;
 }
 
 .card-bg div {
@@ -75,7 +75,7 @@ body {
     font-family: 'Cabin Sketch', cursive;
     color: #35092e;
     position: absolute;
-    z-index: 1;
+    backface-visibility: hidden;
     border-radius: 5px;
 }
 

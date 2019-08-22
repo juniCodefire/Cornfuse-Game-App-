@@ -1,11 +1,11 @@
 .scroller {
   overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-width: thin;
 }
 
 .scroller::-webkit-scrollbar {
-  width: 4px;
-}
+  width: 4px;}
 
 .scroller::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -18,7 +18,9 @@
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px #343a40;
 }
-
+.list-animation-duration {
+  animation-duration:0.1s;
+}
 .color-white {
   color: white;
 }
@@ -29,6 +31,7 @@
 .our-nav a {
   color: white;
 }
+
 /* Card animation */
 .cards {
   background-color: transparent;
@@ -104,7 +107,7 @@
 }
 
 .play_game span {
-  color: lime;
+  color: lightgrey;
   transition: transform 0.6s;
   text-shadow: 1px 1px 1px black;
   letter-spacing: 0.3em;
@@ -113,12 +116,12 @@
 
 .play_game:hover span:nth-child(1) {
   transform: translateY(-2px) rotate(5deg) scale(1.2);
-  color: hotpink;
+  color: lime;
 }
 
 .play_game:hover span:nth-child(2) {
   transform: translateY(2px) rotate(-5deg) scale(1.2);
-  color: hotpink;
+  color: lime;
   order: -1;
 }
 
@@ -136,11 +139,11 @@
 
 #navbarSupportedContent ul li {
   display: inline-block !important;
-  text-align: right;
 }
 
 #navbarSupportedContent a {
-  font-size: 20px;
+  font-size: 22px;
+  margin-top: 10px;
 }
 
 .cornfuse-menu-bar {
@@ -156,32 +159,71 @@
 .menu-btn:focus {
   outline: none;
 }
-.masking {
-  position: relative;
+.masking1 {
+    position: relative;
+    width: 60px;
+    height: 12px;
+    overflow: hidden;
+    transition: 1s all ease;
+    border-bottom-left-radius: 50%;
+}
+.masking1 .up {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 60px;
+    height: 15px;
+    color: white;
+}
+.masking2 {
+    position: relative;
+    width: 60px;
+    height: 12px;
+    overflow: hidden;
+    transition: 1s all ease;
+    
+}
+.masking2 .down {
+    position: absolute;
+    bottom: 13px;
+    left: 0;
+    width: 60px;
+    height:15px;
+    color: white;
+}
+.familia:hover .masking1 {
+  transform: translateX(-2px);
+}
+.familia:hover .masking2 {
+  transform: translateX(2px);
+}
+.familia:hover::before {
+  content: '';
   display: block;
-  background: ;
-}
-.mirage {
+  background: lime;
   position: absolute;
-  background: green;
-  top: 0;
-  left: 0;
-  height: 20px;
-  overflow: hidden;
+  height: 2px;
+  width: 65px;
+  top: 50%;
+  transform: translateY(4px) translateX(6px);
+  margin: auto;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
 }
-.alive {
-  position: absolute;
-  background: blue;
-  bottom: 0;
-  left: 0;
-  height: 20px;
-  overflow: hidden;
+.contact:hover::before {
+  width: 80px;
+  transform: translateY(4px) translateX(6px) !important;
 }
-/* .mirage_links {
-  color: lime !important;
-  position: absolute;
-  top: 15px;
-} */
+.masking:hover .alive {
+ 
+  transform: translateX(-2px);
+}
+.masking:hover .mirage {
+  
+  transform: translateX(2px);
+  transform-style: preserve-3d;
+}
 
 @media(max-width:991px) {
   #navbarSupportedContent {
@@ -192,6 +234,10 @@
     width: 100%;
     top: 62px;
     left: 0;
+  }
+  .familia:hover::before {
+    top: 50%;
+    transform: translateY(4px) translateX(-2px);
   }
 
   #navbarSupportedContent ul {

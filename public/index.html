@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/animated.css" />
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/style.css" />
@@ -27,6 +28,7 @@
 </head>
 
 <body class="authentication-body">
+  
     <div class="container-fluid">
         <div class="row">
             <div class="index-full col-12 px-0">
@@ -47,20 +49,45 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto game-text-family">
-                            <li class="nav-item active" style="padding-left: 0;">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            <li class="nav-item active familia" style="padding-left: 0;">
+                                <a class="nav-link" href="#">
+                                    <div class="masking1">
+                                       <span class="up">Home</span>
+                                    </div>
+                                    <div class="masking2">
+                                        <span class="down">Home</span>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
+                             <li class="nav-item familia" style="padding-left: 0;">
+                                <a class="nav-link" href="/about.html">
+                                    <div class="masking1">
+                                       <span class="up">About</span>
+                                    </div>
+                                    <div class="masking2">
+                                        <span class="down">About</span>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">Contact</a>
+                            <li class="nav-item familia contact" style="padding-left: 0;">
+                                <a class="nav-link" href="/contact.html">
+                                    <div class="masking1" style="width: 80px;">
+                                       <span class="up">Contact</span>
+                                    </div>
+                                    <div class="masking2" style="width: 80px;">
+                                        <span class="down">Contact</span>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">Team</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">Sponsors</a>
+                          <li class="nav-item familia" style="padding-left: 0;">
+                                <a class="nav-link" href="/teams.html">
+                                    <div class="masking1" style="width: 80px;">
+                                       <span class="up">Teams</span>
+                                    </div>
+                                    <div class="masking2" style="width: 80px;">
+                                        <span class="down">Teams</span>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -84,8 +111,8 @@
                                     </div>
                                 </div>
                                 <!-- Stats for everybody in descending order -->
-                                <div class="overall-stats scroller col-12 px-0">
-                                    <div style="animation-duration:0.1s; animation-delay:0s"class="individual-stat col-12 row mx-0 mt-1 animated slideInLeft"
+                                <div class="overall-stats col-12 px-0">
+                                    <div class="list-animation-duration individual-stat col-12 row mx-0 mt-1 animated fadeInLeft"
                                         data-first-leader>
                                         <div class="user-rank col-2">
                                             <h4 class="mt-2 cornfuse-first-leader">#1</h4>
@@ -104,7 +131,7 @@
                                             <h4 class="text-center mt-2">6500</h4>
                                         </div>
                                     </div>
-                                    <div style="animation-duration:0.1s; animation-delay:0.1s"class="individual-stat col-12 row mx-0 mt-1 animated slideInLeft"
+                                    <div style="animation-duration:0.1s; animation-delay:0.1s"class="individual-stat col-12 row mx-0 mt-1 animated fadeInLeft"
                                         data-second-leader>
                                         <div class="user-rank col-2">
                                             <h4 class="mt-2 cornfuse-first-leader">#2</h4>
@@ -123,7 +150,7 @@
                                             <h4 class="text-center mt-2">6450</h4>
                                         </div>
                                     </div>
-                                    <div style="animation-duration:0.1s; animation-delay:0.2s"class="individual-stat col-12 row mx-0 mt-1 animated slideInLeft">
+                                    <div style="animation-duration:0.1s; animation-delay:0.2s"class="individual-stat col-12 row mx-0 mt-1 animated fadeInLeft">
                                         <div class="user-rank col-2">
                                             <h4 class="mt-2 cornfuse-first-leader">#3</h4>
                                         </div>
@@ -141,7 +168,7 @@
                                             <h4 class="text-center mt-2">4095</h4>
                                         </div>
                                     </div>
-                                    <div style="animation-duration:0.1s; animation-delay:0.3s"class="individual-stat col-12 row mx-0 mt-1  animated slideInLeft">
+                                    <div style="animation-duration:0.1s; animation-delay:0.3s"class="individual-stat col-12 row mx-0 mt-1  animated fadeInLeft">
                                         <div class="user-rank col-2">
                                             <h4 class="mt-2">#4</h4>
                                         </div>
@@ -159,7 +186,7 @@
                                             <h4 class="text-center mt-2">3395</h4>
                                         </div>
                                     </div>
-                                    <div style="animation-duration:0.1s; animation-delay:0.4s"class="individual-stat col-12 row mx-0 mt-1  animated slideInLeft">
+                                    <div style="animation-duration:0.1s; animation-delay:0.4s"class="individual-stat col-12 row mx-0 mt-1  animated fadeInLeft">
                                         <div class="user-rank col-2">
                                             <h4 class="mt-2">#5</h4>
                                         </div>
@@ -177,7 +204,7 @@
                                             <h4 class="text-center mt-2">2055</h4>
                                         </div>
                                     </div>
-                                    <div style="animation-duration:0.1s; animation-delay:0.5s"class="individual-stat col-12 row mx-0 mt-1  animated slideInLeft">
+                                    <div style="animation-duration:0.1s; animation-delay:0.5s"class="individual-stat col-12 row mx-0 mt-1  animated fadeInLeft">
                                         <div class="user-rank col-2">
                                             <h4 class="mt-2">#6</h4>
                                         </div>
@@ -195,7 +222,7 @@
                                             <h4 class="text-center mt-2">2000</h4>
                                         </div>
                                     </div>
-                                    <div style="animation-duration:0.1s; animation-delay:0.6s"class="individual-stat col-12 row mx-0 mt-1  animated slideInLeft">
+                                    <div style="animation-duration:0.1s; animation-delay:0.6s"class="individual-stat col-12 row mx-0 mt-1  animated fadeInLeft">
                                         <div class="user-rank col-2">
                                             <h4 class="mt-2">#7</h4>
                                         </div>
@@ -213,7 +240,7 @@
                                             <h4 class="text-center mt-2">1095</h4>
                                         </div>
                                     </div>
-                                    <div style="animation-duration:0.1s; animation-delay:0.7s"class="individual-stat col-12 row mx-0 mt-1  animated slideInLeft">
+                                    <div style="animation-duration:0.1s; animation-delay:0.7s"class="individual-stat col-12 row mx-0 mt-1  animated fadeInLeft">
                                         <div class="user-rank col-2">
                                             <h4 class="mt-2">#8</h4>
                                         </div>
@@ -235,7 +262,7 @@
                             </div>
                             <!--The users stats appear here for quick access -->
                             <div class="user-stat mt-1">
-                                <div style="animation-duration:0.1s; animation-delay:0.9s"class="individual-stat col-12 row mx-0 animated fadeIn" data-current-player>
+                                <div class="individual-stat col-12 row mx-0 animated fadeIn" data-current-player>
                                     <div class="user-rank col-2">
                                         <h4 class="mt-2">#2</h4>
                                     </div>
@@ -417,7 +444,6 @@
 <script src="js/welcome.js"></script>
 <!-- <script>
     var item_0 = document.getElementById("game-value-0");
-
     console.log(item_0);
     let obj = {};
     function removeLi()
@@ -436,7 +462,6 @@
     {
         appendLi();
     }, 5000);
-
 </script> -->
 
 </html>
