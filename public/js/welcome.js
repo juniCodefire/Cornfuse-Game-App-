@@ -215,3 +215,27 @@ switchLeaderBoard = (duty) => {
     }
 
 }
+//Redirect home 
+const home = document.querySelector('#home');
+
+const redirectHome = () => {
+    window.location.href = window.location.origin;
+}
+
+home.addEventListener('click', redirectHome);
+//Track Cursor Movement 
+const body = document.querySelector('.authentication-body');
+const cursor = document.querySelector('.cornfuse_cursor');
+console.log(cursor);
+trackMouse = (event) => {
+    const x = event.clientX;
+    const y = event.clientY;
+    console.log(x,y);
+
+    cursor.style.top = `${y}px`;
+    cursor.style.left = `${x}px`;
+
+}
+
+
+body.addEventListener("mousemove", (event) => trackMouse(event));
