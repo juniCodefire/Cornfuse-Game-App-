@@ -275,11 +275,11 @@
 @media(max-width:991px) {
   #navbarSupportedContent {
     position: absolute;
-    background: linear-gradient(-45deg, #781c4e, indigo, #29111e);
-    z-index: 99999;
+    background: linear-gradient(-30deg, #781c4e, indigo, #29111e);
+    z-index: 99;
     padding: 0;
     width: 100%;
-    top: 62px;
+    top: 50px;
     left: 0;
   }
   .familia:hover::before {
