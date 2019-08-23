@@ -23,7 +23,12 @@ body {
         background-position: 0% 50%
     }
 }
-
+.btn-transparent{
+    letter-spacing: 0.1em;
+}
+.btn-transparent:hover{
+    color: lime;
+}
 .our-nav a {
     color: white;
 }
@@ -31,7 +36,15 @@ body {
 .index-body {
     height: 90vh;
 }
-
+.play_game-dropdown{
+    background: linear-gradient(-45deg, #29111e, #781c4e, indigo), rgba(0,0,0,0.5);
+}
+.single-line-input-form button{
+    background: linear-gradient(-45deg, #29111e, #781c4e, indigo);
+    border: none;
+    border-radius: 25px;
+    color: white;
+}
 .carousel-holder {
     height: 80vh;
 

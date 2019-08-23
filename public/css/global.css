@@ -24,7 +24,19 @@
 .color-white {
   color: white;
 }
-
+.btn-lime{
+  background-color: lime;
+  color: white;
+}
+.btn-lime:hover{
+  background-color: inherit;
+  color: lime;
+  border: 1px solid lime;
+}
+.btn-transparent{
+  background-color: inherit;
+  color: white;
+}
 .our-nav {
   background: rgba(0, 0, 0, 0.5);
   height: 8vh;
@@ -41,6 +53,18 @@
 .border-bottom-black{
   border-bottom: 1px solid black;
 }
+.single-line-input-form input{
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0px;
+}
+.single-line-input-form input:-webkit-autofill,
+.single-line-input-form input:-webkit-autofill:hover, 
+.single-line-input-form input:-webkit-autofill:focus, 
+.single-line-input-form input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
 /* Card animation */
 .cards {
   background-color: transparent;
