@@ -1,0 +1,26 @@
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
+.team-full{
+    min-height: 100vh;
+    background-color: #e3dfdb;
+}
+.team-header h3{
+    border-bottom: 3px solid black;
+}
+.team-leaders{
+    height: 60vh;
+}
+.team-members{
+    height: 40vh;
+}
+.member-photo{
+    height: 30vh;
+}
+.member-photo div{
+    height: 100%;
+}
+.member-data{
+    height: 10vh;
+    border: 1px solid black;
+}

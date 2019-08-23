@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/animated.css" />
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/about.css" />
-    <title>Cornfuse</title>
+    <title>About Cornfuse</title>
     <!-- <script>
         setInterval(() =>
         {
@@ -26,32 +26,73 @@
 </head>
 
 <body class="authentication-body">
+    <div class="cornfuse_cursor">
+        <img src="images/cornfuse-logo.png">
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="about-full col-12 px-0">
-                <nav class="navbar navbar-expand-lg our-nav col-12">
-                    <a class="navbar-brand" href="#">Cornfuse</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+              <nav class="navbar navbar-expand-lg our-nav col-12">
+                    
+                <div class="cornfuse-logo-style">
+                    <div><a class="navbar-brand" href="#"><img src="images/cornfuse-lite.png" /></a></div>
+                </div>
+                <button class="navbar-toggler menu-btn" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <img class="cornfuse-menu-bar" src="images/cornfuse_menu.png" alt="Menu">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto game-text-family">
+                        <li class="nav-item active familia" style="padding-left: 0;" id='home'>
+                             <a style="cursor: pointer;" class="nav-link">
+                                <div class="masking1">
+                                    <span class="up">Home</span>
+                                </div>
+                                <div class="masking2">
+                                    <span class="down">Home</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item familia" style="padding-left: 0;">
+                            <a class="nav-link" href="/about.html">
+                                <div class="masking1">
+                                    <span class="up">About</span>
+                                </div>
+                                <div class="masking2">
+                                    <span class="down">About</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item familia contact" style="padding-left: 0;">
+                            <a class="nav-link" href="/contact.html">
+                                <div class="masking1" style="width: 80px;">
+                                    <span class="up">Contact</span>
+                                </div>
+                                <div class="masking2" style="width: 80px;">
+                                    <span class="down">Contact</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item familia" style="padding-left: 0;">
+                            <a class="nav-link" href="/teams.html">
+                                <div class="masking1" style="width: 80px;">
+                                    <span class="up">Teams</span>
+                                </div>
+                                <div class="masking2" style="width: 80px;">
+                                    <span class="down">Teams</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
                 <div class="col-12 brief-message">
                   <div class="col-3 we-are-cornfuse mx-auto text-center">
                     <h4 class="col-12 mt-3">
-                      WELCOME TO
+                      ABOUT
                     </h4>
                     <h1 class="col-12 cornfuse-big">
                       CORNFUSE
@@ -73,7 +114,7 @@
                   <div class="col-4 others-con mt-5">
                     <div class="col-12 other-boxes meet-the-team my-4">
                       <div class="col-8 mx-auto text-center">
-                        <span class="">MEET THE TEAM</span>
+                        <a href="teams.html" style="color: white; text-decoration: none;"><span class="">MEET THE TEAM</span></a>
                       </div>
                     </div>
                     <div class="col-12 other-boxes my-4">
