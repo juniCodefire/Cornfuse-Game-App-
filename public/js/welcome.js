@@ -228,10 +228,12 @@ const body = document.querySelector('.authentication-body');
 const cursor = document.querySelector('.cornfuse_cursor');
 console.log(cursor);
 trackMouse = (event) => {
-    const x = event.clientX;
-    const y = event.clientY;
+    console.log(event);
+    const x = event.pageX;
+    const y = event.pageY;
     console.log(x,y);
 
+    cursor.style.display = `block`;
     cursor.style.top = `${y}px`;
     cursor.style.left = `${x}px`;
 

@@ -1,6 +1,9 @@
 * {
   cursor: none !important;
 }
+body {
+    overflow-x: hidden !important;
+}
 .cornfuse_cursor {
   width: 5vh;
   height: 5vh;
@@ -13,7 +16,8 @@
   -webkit-animation: blink 3s infinite;
   -moz-animation:    blink 3s infinite;
   -ms-animation:     blink 3s infinite;
-  pointer-events: none
+  pointer-events: none;
+  display: none;
 }
 .cornfuse_cursor img {
   width: 100%;
@@ -39,12 +43,15 @@
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: thin;
+  cursor: pointer !important;
 }
 
 .scroller::-webkit-scrollbar {
   width: 4px;
 }
-
+.scroller .cornfuse_cursor {
+  display: none;
+}
 .scroller::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
