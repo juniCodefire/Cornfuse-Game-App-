@@ -82,6 +82,17 @@ body {
   background-color: inherit;
   color: white;
 }
+.general-btn-bg {
+  background: linear-gradient(-45deg, #29111e, #781c4e, indigo);
+  color: white;
+  border:none;
+  transition: 1s all ease;
+  border-radius: 25px;
+}
+.general-btn-bg:hover {
+  color: lime;
+  transform: scale(1.003);
+}
 .our-nav {
   background: rgba(0, 0, 0, 0.5);
   height: 9vh;
