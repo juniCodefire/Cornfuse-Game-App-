@@ -16,7 +16,6 @@ const firstLeaderPlayerScore = document.querySelector('[data-first-leader]  div:
 const secondLeaderPlayerScore = document.querySelector('[data-second-leader] div:nth-child(3) h4');
 
 let trap = 1;
-
 const animCard_1 = (card_cover, i) => {
     setTimeout(() => {
         if (i === 0) {
@@ -221,8 +220,9 @@ const home = document.querySelector('#home');
 const redirectHome = () => {
     window.location.href = window.location.origin;
 }
-
-home.addEventListener('click', redirectHome);
+if(home){
+    home.addEventListener('click', redirectHome);
+}
 //Track Cursor Movement 
 const body = document.querySelector('.authentication-body');
 const cursor = document.querySelector('.cornfuse_cursor');
@@ -239,5 +239,5 @@ trackMouse = (event) => {
 
 }
 
-
 body.addEventListener("mousemove", (event) => trackMouse(event));
+
