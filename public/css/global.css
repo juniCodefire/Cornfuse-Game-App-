@@ -1,6 +1,10 @@
 * {
   cursor: none !important;
 }
+/* Swal Styling  */
+.swal2-confirm {
+  background: linear-gradient(-45deg, rgb(41, 17, 30), rgb(120, 28, 78), indigo) !important;
+}
 body {
     overflow-x: hidden !important;
 }
@@ -317,7 +321,7 @@ body {
 @media(max-width:991px) {
   #navbarSupportedContent {
     position: absolute;
-    background: linear-gradient(-30deg, #781c4e, indigo, #29111e);
+    background: linear-gradient(-45deg, #29111e, #781c4e, indigo), rgba(0,0,0,0.5);;
     z-index: 99;
     padding: 0;
     width: 100%;

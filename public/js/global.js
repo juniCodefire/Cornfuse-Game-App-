@@ -1,0 +1,1 @@
+const baseUrl = `https://cornfuseappapi.herokuapp.com/`;
