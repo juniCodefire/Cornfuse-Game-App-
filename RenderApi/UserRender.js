@@ -2,8 +2,9 @@
 
 const UserQuery = require('../QueryBuilder/UserQuery')
 const userquery = new UserQuery();
+const User = require('../Model/UserModel');
 //Import the validation module
-const {check, validationResult} = require('express-validator');
+const {check, validationResult, body} = require('express-validator');
 class UserApi {
 	constructor(app, passport) {
 	this.route = app;
@@ -30,6 +31,26 @@ class UserApi {
 			check('username').not().isEmpty().isLength({min:3}).trim().escape().withMessage('Username field is required and must have more than 3 character'),
 			check('email', 'Your email is not valid!').not().isEmpty().isEmail().normalizeEmail(),
 			check('password', 'password is required!').not().isEmpty().trim().escape().isLength({min: 8}),
+			body('username').custom(value => {
+			return User.where('username', value).fetch()
+			.then(user => {
+				if (user) {
+					return Promise.reject('Username already exist, please use another!');
+				}else {
+					return true;
+				}
+			})	
+			}),
+			body('email').custom(value => {
+			return User.where('email', value).fetch()
+			.then(user => {
+				if (user) {
+					return Promise.reject('Email already exist, please use another!');
+				}else {
+					return true;
+				}
+			})	
+			})
 		];
 
 		this.route.post(api, validate, (req, res) => {
