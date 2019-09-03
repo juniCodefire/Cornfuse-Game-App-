@@ -10,6 +10,9 @@ const bodyParser = require('body-parser')
 const path = require('path')
 //Template engine
 const expressEgde = require('express-edge');
+//Import CORS
+const cors = require('cors');
+
 
 //Header AuthorizationProvider
 const passport    = require('passport');
@@ -19,12 +22,8 @@ const strategy = require('./Providers/AuthServiceProvider');
 
 passport.use(strategy);
 app.use(passport.initialize());
-//Allow CrossOrigin
-const allowCrosDomain = function(req, res, next) {
-	res.header('Acess-Control-Allow-Origin', '*');
-	next();
-};
-app.use(allowCrosDomain);
+//Use cors
+app.use(cors());
 //Use the app Here(The USe function helps add functionality to express)
 app.use(express.static('public'));
 app.use(expressEgde);
@@ -106,26 +105,8 @@ app.get('/contact', (req, res) =>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Start the server
-app.listen(7000, () =>
+app.listen(process.env.PORT || 7000, () =>
 {
-    console.log('Server running on http://localhost:7000')
+    console.log('Server running 7000')
 });
