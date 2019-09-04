@@ -460,20 +460,23 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form class="single-line-input-form col-12">
+                    <form id="signUpForm" action="signmeup.pjs" class="single-line-input-form col-12">
                         <div class="form-group">
                             <label for="signup-username">Username</label>
-                            <input type="text" class="form-control" id="username" aria-describedby="emailHelp"
+                            <input name="username" type="text" class="form-control" id="signup-username" aria-describedby="emailHelp"
                                 placeholder="">
                             <small id="emailHelp" class="form-text text-muted">Your username can be changed later.</small>
+                            <p class="con_err_msg"></p>
                         </div>
                         <div class="form-group">
                             <label for="signup-email">Email address</label>
-                            <input type="email" class="form-control" id="signup-email" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input name="email" type="email" class="form-control" id="signup-email" aria-describedby="emailHelp" placeholder="Enter email">
+                            <p class="con_err_msg"></p>
                         </div>
                         <div class="form-group">
                             <label for="signup-pwd">Password</label>
-                            <input type="password" class="form-control" id="pwd" placeholder="">
+                            <input name="password" type="password" class="form-control" id="signup-pwd" placeholder="">
+                            <p class="con_err_msg"></p>
                         </div>
                         <button type="submit" class="btn col-4 text-center">Sign Up</button>
                     </form>
@@ -493,15 +496,17 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form class="single-line-input-form col-12">
+                    <form id="signInForm" class="single-line-input-form col-12">
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" aria-describedby="emailHelp"
-                                placeholder="">
+                            <input name="username" type="text" class="form-control" id="signin-username" aria-describedby="emailHelp"
+                                placeholder="cornboy">
+                            <p class="sign_err_msg"></p>
                         </div>
                         <div class="form-group">
                             <label for="pwd">Password</label>
-                            <input type="password" class="form-control" id="pwd" placeholder="">
+                            <input name="password" type="password" class="form-control" id="signin-pwd" placeholder="********">
+                            <p class="sign_err_msg"></p>
                         </div>
                         <button type="submit" class="btn btn-transparent col-4 text-center">Sign In</button>
                     </form>
@@ -523,7 +528,11 @@
 <script>
     new WOW().init();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script type="text/javascript" src="js/global.js"></script>
 <script src="js/welcome.js"></script>
+<script type="text/javascript" src="js/apiJS/userSignUp.js"></script>
+<script type="text/javascript" src="js/apiJS/userSignIn.js"></script>
 <!-- <script>
     var item_0 = document.getElementById("game-value-0");
     console.log(item_0);

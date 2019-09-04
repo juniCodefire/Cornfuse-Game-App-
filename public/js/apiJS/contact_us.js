@@ -9,19 +9,14 @@ const submitContactForm = (event) => {
 	document.querySelectorAll('.con_err_msg')[2].textContent = "";	
 
 	const formData = new FormData(contact_form);
-	if (formData.get('name') == "") {
-		document.querySelectorAll('.con_err_msg')[0].textContent = "Name field is required!";
+	if (formData.get('username') == "") {
+		document.querySelectorAll('.con_err_msg')[0].textContent = "Username field is required!";
 	}else if(formData.get('email') == "") {
-		document.querySelectorAll('.con_err_msg')[1].textContent = "Email field is required!";	
-	}else if(formData.get('message') == ""){
-		document.querySelectorAll('.con_err_msg')[2].textContent = "Message field is required!";
+		document.querySelectorAll('.con_err_msg')[1].textContent = "Email field is required(a valid email should be used)!";	
+	}else if(formData.get('password') == ""){
+		document.querySelectorAll('.con_err_msg')[2].textContent = "Password field is required(secure password should be used)!";
 	}else {
 		let status;
-		// const data = {
-		// 	name: formData.get('name'),
-		// 	email: formData.get('email'),
-		// 	message: formData.get('message')
-		// }
 		const data = new URLSearchParams(formData);
 		const errorHandling = (response) => {
 			    status = response.status;
