@@ -1,10 +1,13 @@
-* {
+{
   cursor: none !important;
-}
+
+} 
+
 /* Swal Styling  */
 .swal2-confirm {
   background: linear-gradient(-45deg, rgb(41, 17, 30), #cc0044, indigo) !important;
 }
+
 body {
     overflow-x: hidden !important;
 }
@@ -352,4 +355,36 @@ body {
   .play_game {
     margin-left: -50px;
   }
+}
+/* slick */
+.slider {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slick-slide {
+margin: 0px 5px;
+}
+
+.slick-slide img {
+width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+color: black;
+}
+
+
+.slick-slide {
+transition: all ease-in-out .3s;
+opacity: .2;
+}
+
+.slick-active {
+opacity: .5;
+}
+
+.slick-current {
+opacity: 1;
 }
