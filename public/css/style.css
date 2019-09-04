@@ -8,7 +8,8 @@ body {
 
 .index-full {
     height: 100vh;
-    background: linear-gradient(-45deg, #29111e, #781c4e, indigo);
+    /*#781c4e*/
+    background: linear-gradient(-45deg, #29111e, #cc0044, indigo);
     background-position: center;
     background-size: 400% 400%;
     animation: gradientWallpaper 10s ease infinite;
@@ -41,10 +42,10 @@ body {
     height: 90vh;
 }
 .play_game-dropdown{
-    background: linear-gradient(-45deg, #29111e, #781c4e, indigo), rgba(0,0,0,0.5);
+    background: linear-gradient(-45deg, #29111e, #cc0044, indigo), rgba(0,0,0,0.5);
 }
 .single-line-input-form button{
-    background: linear-gradient(-45deg, #29111e, #781c4e, indigo);
+    background: linear-gradient(-45deg, #29111e, #cc0044, indigo);
     border: none;
     border-radius: 25px;
     color: white;
@@ -229,7 +230,7 @@ body {
 }
 
 .cornfuse-first-leader {
-    color: #781c4e;
+    color: #cc0044;
 }
 
 
