@@ -66,7 +66,7 @@ const signInFormFunc = (event) => {
 			}else{
 				console.log(data)
 				localStorage.setItem('cornfuse_gamer_data', JSON.stringify(data));
-				// location.replace(`${window.location.origin}/showcase.html`)
+				location.replace(`${window.location.origin}/showcase.html`)
 			}
 		})
 		.catch(error => console.error(error))
