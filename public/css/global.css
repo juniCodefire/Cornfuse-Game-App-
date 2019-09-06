@@ -1,9 +1,22 @@
-/* * {
+{
   cursor: none !important;
-} */
+
+} 
+
+/* Swal Styling  */
+.swal2-confirm {
+  background: linear-gradient(-45deg, rgb(41, 17, 30), #cc0044, indigo) !important;
+}
+
 body {
     overflow-x: hidden !important;
 }
+.con_err_msg, .sign_err_msg {
+  color: red;
+  font-size: 14px;
+  height: 15px;
+}
+
 .cornfuse_cursor {
   width: 5vh;
   height: 5vh;
@@ -81,6 +94,17 @@ body {
 .btn-transparent{
   background-color: inherit;
   color: white;
+}
+.general-btn-bg {
+  background: linear-gradient(-45deg, #29111e, #cc0044, indigo);
+  color: white;
+  border:none;
+  transition: 1s all ease;
+  border-radius: 25px;
+}
+.general-btn-bg:hover {
+  color: lime;
+  transform: scale(1.003);
 }
 .our-nav {
   background: rgba(0, 0, 0, 0.5);
@@ -172,7 +196,7 @@ body {
   position: absolute;
   left: 50%;
   color: white;
-  border: 1px solid #781c4e;
+  border: 1px solid #cc0044;
   padding: 10px;
   margin-left: -100px;
   border-radius: 50px;
@@ -306,7 +330,7 @@ body {
 @media(max-width:991px) {
   #navbarSupportedContent {
     position: absolute;
-    background: linear-gradient(-30deg, #781c4e, indigo, #29111e);
+    background: linear-gradient(-45deg, #29111e, #cc0044, indigo), rgba(0,0,0,0.5);;
     z-index: 99;
     padding: 0;
     width: 100%;
