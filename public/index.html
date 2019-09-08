@@ -36,7 +36,7 @@
             <div class="index-full col-12 px-0">
                 <nav class="navbar navbar-expand-lg our-nav col-12">
                     <div class="play_game dropdown">
-                        <div class="" type="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        <div class="play-btn" id="dropdownMenuButton" data-toggle="dropdown"   aria-haspopup="true"
                             aria-expanded="false">
                             <span>PLAY</span>
                             <span>GAME</span>
@@ -453,9 +453,14 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <div class="preloader_bg" data-signup-preloader>
+                    <div class="cornfuse_preloader fadeInContinue">
+                        <img src="images/cornfuse-logo.png">
+                    </div>
+                </div>
                 <div class="modal-header text-center">
                     <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="z-index: 999999999999;">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -489,6 +494,11 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <div class="preloader_bg" data-signin-preloader>
+                    <div class="cornfuse_preloader fadeInContinue">
+                        <img src="images/cornfuse-logo.png">
+                    </div>
+                </div>
                 <div class="modal-header text-center">
                     <h5 class="modal-title" id="logInModalLabel">Sign In</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">

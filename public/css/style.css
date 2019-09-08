@@ -8,8 +8,8 @@ body {
 
 .index-full {
     height: 100vh;
-    /*#781c4e*/
-    background: linear-gradient(-45deg, #29111e, #cc0044, indigo);
+    /*#781c4e  #cc0044*/
+    background: linear-gradient(-45deg, #29111e, #b30059, indigo);
     background-position: center;
     background-size: 400% 400%;
     animation: gradientWallpaper 10s ease infinite;
@@ -42,10 +42,10 @@ body {
     height: 90vh;
 }
 .play_game-dropdown{
-    background: linear-gradient(-45deg, #29111e, #cc0044, indigo), rgba(0,0,0,0.5);
+    background: linear-gradient(-45deg, #29111e, #b30059, indigo), rgba(0,0,0,0.5);
 }
 .single-line-input-form button{
-    background: linear-gradient(-45deg, #29111e, #cc0044, indigo);
+    background: linear-gradient(-45deg, #29111e, #b30059, indigo);
     border: none;
     border-radius: 25px;
     color: white;
@@ -186,6 +186,7 @@ body {
 
 .carousel-modify {}
 
+
 .cornfuse-player {
     font-size: 4vh;
     width: 50%;
@@ -224,17 +225,9 @@ body {
     text-align: center;
 }
 
-.game-text-family {
-    font-family: 'Cabin Sketch',
-        cursive;
-}
-
 .cornfuse-first-leader {
-    color: #cc0044;
+    color: #b30059;
 }
-
-
-
 
 
 

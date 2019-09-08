@@ -124,6 +124,14 @@
 
                         </div>
                     </div>
+                   <!--  <form>
+                      <script src="https://js.paystack.co/v1/inline.js"></script>
+                      <button type="button" onclick="payWithPaystack()"> Paystack </button> 
+                    </form>
+
+                     <button type="button" onclick="pay('shirt',500)"> Pay for shirt </button>
+                     <button type="button" onclick="pay('shoe',10000)"> Pay for shoe </button> -->
+
                 </div>
             </div>
         </div>
@@ -166,5 +174,88 @@
     }, 5000);
 
 </script> -->
+<!-- place below the html form -->
+<script>
+  function payWithPaystack(){
+    var handler = PaystackPop.setup({
+      key: 'pk_test_388d45505fbacbb0a0d9ae7e15c6257128a08c98',
+      email: 'customer@email.com',
+      amount: 100000,//this is in kobo
+      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+      metadata: {
+         custom_fields: [
+            {
+                display_name: "Mobile Number",
+                variable_name: "mobile_number",
+                value: "+2348012345678"
+            }
+         ]
+      },
+      callback: function(response){
+          alert('success. transaction ref is ' + response.reference);
+      },
+      onClose: function(){
+          alert('window closed');
+      }
+    });
+    handler.openIframe();
+  }
+</script>
+<script src="//voguepay.com/js/voguepay.js"></script>
+
+<script>
+    closedFunction=function() {
+        alert('window closed');
+    }
+
+     successFunction=function(transaction_id) {
+        alert('Transaction was successful, Ref: '+transaction_id)
+    }
+
+     failedFunction=function(transaction_id) {
+         alert('Transaction was not successful, Ref: '+transaction_id)
+    }
+</script>
+
+ <script>
+    function pay(item,price){
+       //Initiate voguepay inline payment
+        Voguepay.init({
+            v_merchant_id: 'demo',
+            total: price,
+            notify_url:'http://domain.com/notification.php',
+            cur: 'NGN',
+            merchant_ref: 'ref123',
+            memo:'Payment for '+item,
+            developer_code: '5a61be72ab323',
+            store_id:1,
+            items: [
+                {
+                    name: "Item name 1",
+                    description: "Description 1",
+                    price: 500
+                },
+                {
+                    name: "Item name 2",
+                    description: "Description 2",
+                    price: 1000
+                }
+            ],
+            customer: {
+                name: 'Okechukwu Obi',
+                address: 'Eze Advenue Rumuosi Town, Port Harcourt',
+                city: 'Port Harcourt',
+                state: 'River State',
+                zipcode: '500411',
+                email: 'junicodefire@gmail.com',
+                phone: '+2347060959269'
+            },
+           closed:closedFunction,
+           success:successFunction,
+           failed:failedFunction
+       });
+    }
+
+ </script>
 
 </html>
