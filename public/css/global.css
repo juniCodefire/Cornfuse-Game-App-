@@ -69,7 +69,9 @@ body {
 .fadeInContinue {
   animation: fadeIn 1s infinite linear;
 }
-
+.bounceOutContinue {
+  animation: bounceOut 1s infinite linear;
+}
 .cornfuse_preloader {
   width: 10vh;
   height: 10vh;
@@ -260,21 +262,21 @@ body {
     /* height: 60%; */
 }
 
-
 .play_game {
   position: absolute;
   left: 50%;
   color: white;
   background: url('../images/GIFs/playbtn.gif') center no-repeat;
-  background-size: 150% 150%;
-  padding: 13px;
+  background-size: 200% 200%;
+  padding: 0px;
   margin-left: -100px;
   border-radius: 50px;
-  padding-right: 35px;
-  padding-left: 35px;
+  padding-right: 10px;
+  padding-left: 10px;
   font-size: 20px;
   font-family: 'Ma Shan Zheng', cursive;
   cursor: pointer;
+  border:10px solid rgba(0, 0, 0, 0.3)
 
 }
 
