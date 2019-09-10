@@ -201,7 +201,7 @@ switchLeaderBoard = (duty) => {
         secondLeaderPlayer.textContent = 'jamiegamer';
         secondLeaderPlayer.classList.remove("animated", 'fadeIn');
         //the score update
-        secondLeaderPlayerScore.textContent = '6550';
+        secondLeaderPlayerScore.textContent = '6450';
         secondLeaderPlayerScore.classList.remove("animated", 'fadeIn');
 
         //replace the currrent player status

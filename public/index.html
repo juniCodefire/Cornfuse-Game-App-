@@ -518,7 +518,39 @@
                             <input name="password" type="password" class="form-control" id="signin-pwd" placeholder="********">
                             <p class="sign_err_msg"></p>
                         </div>
+                        <p data-recovery-btn class="flash_btn" data-toggle="modal" data-target="#RecoverPasswordModal">Recover Password?</p>
                         <button type="submit" class="btn btn-transparent col-4 text-center">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Forget Password -->
+     <div class="modal fade" id="RecoverPasswordModal" tabindex="-1" role="dialog" aria-labelledby="RecoverPasswordModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="preloader_bg" data-signin-preloader>
+                    <div class="cornfuse_preloader fadeInContinue bounceOutContinue">
+                        <img src="images/cornfuse-logo.png">
+                    </div>
+                </div>
+                <div class="modal-header text-center">
+                    <h5 class="modal-title" id="logInModalLabel">Recover Password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="signInForm" class="single-line-input-form col-12">
+                        <div class="form-group">
+                            <label for="username">Enter Email</label>
+                            <input name="username" type="text" class="form-control" id="recover-email" aria-describedby="emailHelp"
+                                placeholder="Email">
+                            <p class="recover_err_msg"></p>
+                        </div>
+                        <p data-sign-btn class="flash_btn" data-toggle="modal" data-target="#logInModal">Sign In</p>
+                        <button type="submit" class="btn btn-transparent col-4 text-center">Recover</button>
                     </form>
                 </div>
             </div>

@@ -13,7 +13,13 @@ body {
     background-size: 400% 400%;
     animation: gradientWallpaper 10s ease infinite;
 }
-
+.flash_btn {
+text-align: right;
+color: #b30059;
+position: absolute;
+font-weight: bold;
+right: 0;
+}
 @keyframes gradientWallpaper {
     0% {
         background-position: 0% 50%
