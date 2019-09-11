@@ -5,15 +5,21 @@
 body {
     font-family: 'Titillium Web', sans-serif;
 }
-
 .index-full {
     height: 100vh;
-    background: linear-gradient(-45deg, #29111e, #781c4e, indigo);
+    /*#781c4e  #cc0044*/
+    background: linear-gradient(-45deg, #29111e, #b30059, indigo);
     background-position: center;
     background-size: 400% 400%;
     animation: gradientWallpaper 10s ease infinite;
 }
-
+.flash_btn {
+text-align: right;
+color: #b30059;
+position: absolute;
+font-weight: bold;
+right: 0;
+}
 @keyframes gradientWallpaper {
     0% {
         background-position: 0% 50%
@@ -41,10 +47,10 @@ body {
     height: 90vh;
 }
 .play_game-dropdown{
-    background: linear-gradient(-45deg, #29111e, #781c4e, indigo), rgba(0,0,0,0.5);
+    background: linear-gradient(-45deg, #29111e, #b30059, indigo), rgba(0,0,0,0.5);
 }
 .single-line-input-form button{
-    background: linear-gradient(-45deg, #29111e, #781c4e, indigo);
+    background: linear-gradient(-45deg, #29111e, #b30059, indigo);
     border: none;
     border-radius: 25px;
     color: white;
@@ -185,6 +191,7 @@ body {
 
 .carousel-modify {}
 
+
 .cornfuse-player {
     font-size: 4vh;
     width: 50%;
@@ -223,17 +230,9 @@ body {
     text-align: center;
 }
 
-.game-text-family {
-    font-family: 'Cabin Sketch',
-        cursive;
-}
-
 .cornfuse-first-leader {
-    color: #781c4e;
+    color: #b30059;
 }
-
-
-
 
 
 

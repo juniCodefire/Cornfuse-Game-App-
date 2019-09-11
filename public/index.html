@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/animated.css" />
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/style.css" />
-    <title>Cornfuse</title>
+    <title>Home | Cornfuse</title>
     <!-- <script>
         setInterval(() =>
         {
@@ -36,12 +36,12 @@
             <div class="index-full col-12 px-0">
                 <nav class="navbar navbar-expand-lg our-nav col-12">
                     <div class="play_game dropdown">
-                        <div class="" type="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        <div class="play-btn" id="dropdownMenuButton" data-toggle="dropdown"   aria-haspopup="true"
                             aria-expanded="false">
                             <span>PLAY</span>
                             <span>GAME</span>
                         </div>
-                        <div class="dropdown-menu play_game-dropdown col-12" aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-menu play_game-dropdown col-12 animated fadeIn" aria-labelledby="dropdownMenuButton">
                             <div class="col-12">
                                 <button class="btn btn-transparent col-12" data-toggle="modal"
                                     data-target="#signUpModal">Sign Up</button>
@@ -453,29 +453,37 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <div class="preloader_bg" data-signup-preloader>
+                    <div class="cornfuse_preloader fadeInContinue bounceOutContinue">
+                        <img src="images/cornfuse-logo.png">
+                    </div>
+                </div>
                 <div class="modal-header text-center">
                     <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="z-index: 999999999999;">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form class="single-line-input-form col-12">
+                    <form id="signUpForm" action="signmeup.pjs" class="single-line-input-form col-12">
                         <div class="form-group">
                             <label for="signup-username">Username</label>
-                            <input type="text" class="form-control" id="username" aria-describedby="emailHelp"
+                            <input name="username" type="text" class="form-control" id="signup-username" aria-describedby="emailHelp"
                                 placeholder="">
                             <small id="emailHelp" class="form-text text-muted">Your username can be changed later.</small>
+                            <p class="con_err_msg"></p>
                         </div>
                         <div class="form-group">
                             <label for="signup-email">Email address</label>
-                            <input type="email" class="form-control" id="signup-email" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input name="email" type="email" class="form-control" id="signup-email" aria-describedby="emailHelp" placeholder="Enter email">
+                            <p class="con_err_msg"></p>
                         </div>
                         <div class="form-group">
                             <label for="signup-pwd">Password</label>
-                            <input type="password" class="form-control" id="pwd" placeholder="">
+                            <input name="password" type="password" class="form-control" id="signup-pwd" placeholder="">
+                            <p class="con_err_msg"></p>
                         </div>
-                        <button type="submit" class="btn col-4 text-center">Log In</button>
+                        <button type="submit" class="btn col-4 text-center">Sign Up</button>
                     </form>
                 </div>
             </div>
@@ -486,24 +494,63 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <div class="preloader_bg" data-signin-preloader>
+                    <div class="cornfuse_preloader fadeInContinue bounceOutContinue">
+                        <img src="images/cornfuse-logo.png">
+                    </div>
+                </div>
                 <div class="modal-header text-center">
-                    <h5 class="modal-title" id="logInModalLabel">Log In</h5>
+                    <h5 class="modal-title" id="logInModalLabel">Sign In</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form class="single-line-input-form col-12">
+                    <form id="signInForm" class="single-line-input-form col-12">
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" aria-describedby="emailHelp"
-                                placeholder="">
+                            <input name="username" type="text" class="form-control" id="signin-username" aria-describedby="emailHelp"
+                                placeholder="cornboy">
+                            <p class="sign_err_msg"></p>
                         </div>
                         <div class="form-group">
                             <label for="pwd">Password</label>
-                            <input type="password" class="form-control" id="pwd" placeholder="">
+                            <input name="password" type="password" class="form-control" id="signin-pwd" placeholder="********">
+                            <p class="sign_err_msg"></p>
                         </div>
-                        <button type="submit" class="btn col-4 text-center">Log In</button>
+                        <p data-recovery-btn class="flash_btn" data-toggle="modal" data-target="#RecoverPasswordModal">Recover Password?</p>
+                        <button type="submit" class="btn btn-transparent col-4 text-center">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Forget Password -->
+     <div class="modal fade" id="RecoverPasswordModal" tabindex="-1" role="dialog" aria-labelledby="RecoverPasswordModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="preloader_bg" data-signin-preloader>
+                    <div class="cornfuse_preloader fadeInContinue bounceOutContinue">
+                        <img src="images/cornfuse-logo.png">
+                    </div>
+                </div>
+                <div class="modal-header text-center">
+                    <h5 class="modal-title" id="logInModalLabel">Recover Password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="signInForm" class="single-line-input-form col-12">
+                        <div class="form-group">
+                            <label for="username">Enter Email</label>
+                            <input name="username" type="text" class="form-control" id="recover-email" aria-describedby="emailHelp"
+                                placeholder="Email">
+                            <p class="recover_err_msg"></p>
+                        </div>
+                        <p data-sign-btn class="flash_btn" data-toggle="modal" data-target="#logInModal">Sign In</p>
+                        <button type="submit" class="btn btn-transparent col-4 text-center">Recover</button>
                     </form>
                 </div>
             </div>
@@ -523,7 +570,11 @@
 <script>
     new WOW().init();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script type="text/javascript" src="js/global.js"></script>
 <script src="js/welcome.js"></script>
+<script type="text/javascript" src="js/apiJS/userSignUp.js"></script>
+<script type="text/javascript" src="js/apiJS/userSignIn.js"></script>
 <!-- <script>
     var item_0 = document.getElementById("game-value-0");
     console.log(item_0);

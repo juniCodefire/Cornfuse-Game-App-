@@ -16,7 +16,6 @@ const firstLeaderPlayerScore = document.querySelector('[data-first-leader]  div:
 const secondLeaderPlayerScore = document.querySelector('[data-second-leader] div:nth-child(3) h4');
 
 let trap = 1;
-
 const animCard_1 = (card_cover, i) => {
     setTimeout(() => {
         if (i === 0) {
@@ -202,7 +201,7 @@ switchLeaderBoard = (duty) => {
         secondLeaderPlayer.textContent = 'jamiegamer';
         secondLeaderPlayer.classList.remove("animated", 'fadeIn');
         //the score update
-        secondLeaderPlayerScore.textContent = '6550';
+        secondLeaderPlayerScore.textContent = '6450';
         secondLeaderPlayerScore.classList.remove("animated", 'fadeIn');
 
         //replace the currrent player status
@@ -221,17 +220,15 @@ const home = document.querySelector('#home');
 const redirectHome = () => {
     window.location.href = window.location.origin;
 }
-
-home.addEventListener('click', redirectHome);
+if(home){
+    home.addEventListener('click', redirectHome);
+}
 //Track Cursor Movement 
 const body = document.querySelector('.authentication-body');
 const cursor = document.querySelector('.cornfuse_cursor');
-console.log(cursor);
 trackMouse = (event) => {
-    console.log(event);
     const x = event.pageX;
     const y = event.pageY;
-    console.log(x,y);
 
     cursor.style.display = `block`;
     cursor.style.top = `${y}px`;
@@ -239,5 +236,5 @@ trackMouse = (event) => {
 
 }
 
-
 body.addEventListener("mousemove", (event) => trackMouse(event));
+

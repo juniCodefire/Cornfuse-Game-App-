@@ -17,3 +17,10 @@ body{
 .contact-us-details{
     height: 30%;
 }
+#title, #action{
+	color: white;
+}
+#error_field {
+	font-weight: bold;
+	color: red;
+}
