@@ -41,6 +41,9 @@ body {
 .index-body {
     height: 90vh;
 }
+.play_game{
+    background: linear-gradient(rgba(192, 255))
+}
 .play_game-dropdown{
     background: linear-gradient(-45deg, #29111e, #cc0044, indigo), rgba(0,0,0,0.5);
 }
