@@ -1,5 +1,5 @@
-const signInForm = document.querySelector('#signInForm')
-
+const signInForm = document.querySelector('#signInForm');
+const sign_preloader = document.querySelector('[data-signin-preloader]');
 
 const signInFormFunc = (event) => {
 	event.preventDefault();
@@ -13,6 +13,7 @@ const signInFormFunc = (event) => {
 		document.querySelectorAll('.sign_err_msg')[1].textContent = "Password is required!";
 	}else {
 		let status;
+		sign_preloader.style.display = 'block';
 		const errorHandling = (response) => {
 			status = response.status;
 			return response.json();
@@ -27,6 +28,7 @@ const signInFormFunc = (event) => {
 		})
 		.then(response => errorHandling(response))
 		.then(data => {
+			sign_preloader.style.display = 'none';
 		    const flashAlert = (path) => {
 				Swal.fire({
 				    title: `<b id="title"></b>`,
@@ -66,10 +68,13 @@ const signInFormFunc = (event) => {
 			}else{
 				console.log(data)
 				localStorage.setItem('cornfuse_gamer_data', JSON.stringify(data));
-				// location.replace(`${window.location.origin}/showcase.html`)
+				location.replace(`${window.location.origin}/showcase.html`)
 			}
 		})
-		.catch(error => console.error(error))
+		.catch(error => {
+		 	sign_preloader.style.display = 'none';
+			console.error(error)
+		})
 	}
 }
 

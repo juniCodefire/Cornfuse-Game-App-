@@ -1,9 +1,64 @@
+body {
+	overflow: hidden;
+}
 .game-background{
 	height: 100vh;
 	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url("../images/Game-Backgrounds/game-1-bg.png");
 	background-size: cover;
 	background-position: center;
 	animation: fadeIn 2s linear forwards;
+}
+.select_play_btn {
+	position: absolute;
+	background: rgba(0,0,0,0.7);
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	border-radius: 10px;
+	transition: 1s all ease;
+	display: none;
+}
+.select_play_btn .data_play_block {
+	width: 75%;
+	border-radius: 50%;
+	height: 20vh;
+	background:black;
+	position: absolute;
+	z-index: 9999;
+	left: 12%;
+	top: 5%;
+	background: url(../images/GIFs/playbtn.gif) center no-repeat;
+	background-size: 205px 205px;
+	border:20px solid rgba(0, 0, 0, 0.3)
+}
+.play_text {
+	color: white;
+	text-align: center;
+	margin-top: 30px;
+	font-size: 25px;
+	margin-left: 5px;
+	letter-spacing: 5px;
+	font-family: 'Cabin Sketch', cursive;
+}
+.inner_play_btn {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+}
+.inner_play_btn img{
+	width: 100%;
+	height: 100%;
+
+}
+.slick-current:hover .select_play_btn {
+	display: block;
+	transform: scale(1.003);
+}
+.slick-current:focus .select_play_btn {
+	display: block;
+	transform: scale(1.003);
 }
 .slider-area{
 	margin-top: 25vh;
@@ -44,4 +99,14 @@
 	to{
 		opacity: 1;
 	}
+}
+.showcase_wel_preloader {
+  display: block;
+  background: none;
+}
+.showcase_wel_preloader .cornfuse_preloader {
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
 }

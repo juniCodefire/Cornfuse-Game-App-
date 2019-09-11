@@ -1,8 +1,10 @@
-const signUpForm = document.querySelector('#signUpForm')
+const signUpForm = document.querySelector('#signUpForm');
+const signup_preloader = document.querySelector('[data-signup-preloader]');
 
 
 const signUpFormFunc = (event) => {
 	event.preventDefault();
+	
 	document.querySelectorAll('.con_err_msg')[0].textContent = "";	
 	document.querySelectorAll('.con_err_msg')[1].textContent = "";	
 	document.querySelectorAll('.con_err_msg')[2].textContent = "";	
@@ -16,6 +18,7 @@ const signUpFormFunc = (event) => {
 		document.querySelectorAll('.con_err_msg')[2].textContent = "A secured password is required!";
 	}else {
 		let status;
+		signup_preloader.style.display = 'block';
 		const errorHandling = (response) => {
 			status = response.status;
 			return response.json();
@@ -30,6 +33,7 @@ const signUpFormFunc = (event) => {
 		})
 		.then(response => errorHandling(response))
 		.then(data => {
+		signup_preloader.style.display = 'none';
 		let title = 'Sign up succesful';
 			let msg = `please check you email <a style="color: #cc0044; 
 									text-decoration:none; background:#e6e6e6;
@@ -78,7 +82,10 @@ const signUpFormFunc = (event) => {
 				signUpForm.reset();
 			}
 		})
-		.catch(error => console.error(error))
+		.catch(error => {
+			signup_preloader.style.display = 'none';
+			console.error(error)
+		})
 	}
 }
 

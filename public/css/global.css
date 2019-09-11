@@ -1,11 +1,10 @@
-{
+* {
   cursor: none !important;
-
 } 
 
 /* Swal Styling  */
 .swal2-confirm {
-  background: linear-gradient(-45deg, rgb(41, 17, 30), #cc0044, indigo) !important;
+  background: linear-gradient(-45deg, rgb(41, 17, 30), #b30059, indigo) !important;
 }
 
 body {
@@ -15,6 +14,78 @@ body {
   color: red;
   font-size: 14px;
   height: 15px;
+}
+/*preloader 2*/
+.publicPreloader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999999;
+    background: url("../images/rippleloader.gif") center no-repeat #0d0d0d;
+    background-size: 100px 100px;
+}
+.publicPreloader main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.preloader_text {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 40px;
+  margin-left: -70px;
+  margin-right: -70px;
+  text-transform: uppercase;
+  color: #f58731;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+.rotate {
+  animation: rotation 0.7s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.preloader_bg {
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  position: absolute;
+  background: black;
+  opacity: 0.4;
+  display: none;
+}
+.fadeInContinue {
+  animation: fadeIn 1s infinite linear;
+}
+.bounceOutContinue {
+  animation: bounceOut 1s infinite linear;
+}
+.cornfuse_preloader {
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 9999;
+  margin-left: -30px;
+  margin-top: -10px;
+  top: 50%;
+  left: 50%;
+}
+.cornfuse_preloader img {
+  width: 100%;
+  height: 100%;
 }
 
 .cornfuse_cursor {
@@ -96,7 +167,7 @@ body {
   color: white;
 }
 .general-btn-bg {
-  background: linear-gradient(-45deg, #29111e, #cc0044, indigo);
+  background: linear-gradient(-45deg, #29111e, #b30059, indigo);
   color: white;
   border:none;
   transition: 1s all ease;
@@ -191,20 +262,21 @@ body {
     /* height: 60%; */
 }
 
-
 .play_game {
   position: absolute;
   left: 50%;
   color: white;
-  border: 1px solid #cc0044;
-  padding: 10px;
-  margin-left: -100px;
+  background: url('../images/GIFs/playbtn.gif') center no-repeat;
+  background-size: 200% 200%;
+  padding: 0px;
+  margin-left: -90px;
   border-radius: 50px;
-  padding-right: 35px;
-  padding-left: 35px;
+  padding-right: 10px;
+  padding-left: 10px;
   font-size: 20px;
   font-family: 'Ma Shan Zheng', cursive;
   cursor: pointer;
+  border:10px solid rgba(0, 0, 0, 0.3)
 
 }
 
@@ -226,7 +298,6 @@ body {
   color: lime;
   order: -1;
 }
-
 
 #navbarSupportedContent {
   width: 70%;
@@ -306,7 +377,7 @@ body {
   position: absolute;
   height: 2px;
   width: 65px;
-  top: 50%;
+  top: 45%;
   transform: translateY(4px) translateX(6px);
   margin: auto;
   border-radius: 50%;
@@ -327,10 +398,17 @@ body {
   transform-style: preserve-3d;
 }
 
+
+.game-text-family {
+    font-family: 'Cabin Sketch',
+        cursive;
+}
+
+
 @media(max-width:991px) {
   #navbarSupportedContent {
     position: absolute;
-    background: linear-gradient(-45deg, #29111e, #cc0044, indigo), rgba(0,0,0,0.5);;
+    background: linear-gradient(-45deg, #29111e, #b30059, indigo), rgba(0,0,0,0.5);;
     z-index: 99;
     padding: 0;
     width: 100%;
@@ -338,7 +416,7 @@ body {
     left: 0;
   }
   .familia:hover::before {
-    top: 50%;
+    top: 45%;
     transform: translateY(4px) translateX(-2px);
   }
 
