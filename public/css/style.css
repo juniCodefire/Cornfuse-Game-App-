@@ -46,10 +46,8 @@ right: 0;
 .index-body {
     height: 90vh;
 }
-.play_game{
-    background: linear-gradient(rgba(192, 255))
-}
 .play_game-dropdown{
+    /* width: 50vw; */
     background: linear-gradient(-45deg, #29111e, #b30059, indigo), rgba(0,0,0,0.5);
 }
 .single-line-input-form button{
@@ -235,6 +233,9 @@ right: 0;
 
 .cornfuse-first-leader {
     color: #b30059;
+}
+.play_game-dropdown .btn-transparent{
+    font-family: 'Cabin Sketch', cursive;
 }
 
 

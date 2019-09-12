@@ -35,20 +35,24 @@
         <div class="row">
             <div class="index-full col-12 px-0">
                 <nav class="navbar navbar-expand-lg our-nav col-12">
-                    <div class="play_game dropdown">
-                        <div class="play-btn" id="dropdownMenuButton" data-toggle="dropdown"   aria-haspopup="true"
-                            aria-expanded="false">
-                            <span>PLAY</span>
-                            <span>GAME</span>
+                    <div class="play-game-con">
+                            <a href="" class="neon-play-game" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            PLAY GAME
+                        </a>
+                        <div class="dropdown-menu play_game-dropdown col-8 mx-auto animated fadeIn"
+                        aria-labelledby="dropdownMenuButton">
+                        <div class="col-12">
+                            <button class="btn btn-transparent col-12" data-toggle="modal"
+                                data-target="#signUpModal">Sign Up</button>
+                            <button class="btn btn-transparent mt-2 col-12" data-toggle="modal"
+                                data-target="#logInModal">Log In</button>
                         </div>
-                        <div class="dropdown-menu play_game-dropdown col-12 animated fadeIn" aria-labelledby="dropdownMenuButton">
-                            <div class="col-12">
-                                <button class="btn btn-transparent col-12" data-toggle="modal"
-                                    data-target="#signUpModal">Sign Up</button>
-                                <button class="btn btn-transparent mt-2 col-12" data-toggle="modal"
-                                    data-target="#logInModal">Log In</button>
-                            </div>
-                        </div>
+                    </div>
                     </div>
                     <div class="cornfuse-logo-style">
                         <div><a class="navbar-brand" href="#"><img src="images/cornfuse-lite.png" /></a></div>
@@ -105,6 +109,7 @@
                         </ul>
                     </div>
                 </nav>
+
                 <div class="index-body col-12 row px-0 mx-0">
                     <div class="col-5 leaderboards">
                         <div class="col-11 mx-auto lead-con game-text-family">
@@ -460,7 +465,8 @@
                 </div>
                 <div class="modal-header text-center">
                     <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="z-index: 999999999999;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        style="z-index: 999999999999;">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -468,14 +474,16 @@
                     <form id="signUpForm" action="signmeup.pjs" class="single-line-input-form col-12">
                         <div class="form-group">
                             <label for="signup-username">Username</label>
-                            <input name="username" type="text" class="form-control" id="signup-username" aria-describedby="emailHelp"
-                                placeholder="">
-                            <small id="emailHelp" class="form-text text-muted">Your username can be changed later.</small>
+                            <input name="username" type="text" class="form-control" id="signup-username"
+                                aria-describedby="emailHelp" placeholder="">
+                            <small id="emailHelp" class="form-text text-muted">Your username can be changed
+                                later.</small>
                             <p class="con_err_msg"></p>
                         </div>
                         <div class="form-group">
                             <label for="signup-email">Email address</label>
-                            <input name="email" type="email" class="form-control" id="signup-email" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input name="email" type="email" class="form-control" id="signup-email"
+                                aria-describedby="emailHelp" placeholder="Enter email">
                             <p class="con_err_msg"></p>
                         </div>
                         <div class="form-group">
@@ -509,16 +517,18 @@
                     <form id="signInForm" class="single-line-input-form col-12">
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input name="username" type="text" class="form-control" id="signin-username" aria-describedby="emailHelp"
-                                placeholder="cornboy">
+                            <input name="username" type="text" class="form-control" id="signin-username"
+                                aria-describedby="emailHelp" placeholder="cornboy">
                             <p class="sign_err_msg"></p>
                         </div>
                         <div class="form-group">
                             <label for="pwd">Password</label>
-                            <input name="password" type="password" class="form-control" id="signin-pwd" placeholder="********">
+                            <input name="password" type="password" class="form-control" id="signin-pwd"
+                                placeholder="********">
                             <p class="sign_err_msg"></p>
                         </div>
-                        <p data-recovery-btn class="flash_btn" data-toggle="modal" data-target="#RecoverPasswordModal">Recover Password?</p>
+                        <p data-recovery-btn class="flash_btn" data-toggle="modal" data-target="#RecoverPasswordModal">
+                            Recover Password?</p>
                         <button type="submit" class="btn btn-transparent col-4 text-center">Sign In</button>
                     </form>
                 </div>
@@ -526,8 +536,8 @@
         </div>
     </div>
     <!--Forget Password -->
-     <div class="modal fade" id="RecoverPasswordModal" tabindex="-1" role="dialog" aria-labelledby="RecoverPasswordModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="RecoverPasswordModal" tabindex="-1" role="dialog"
+        aria-labelledby="RecoverPasswordModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="preloader_bg" data-signin-preloader>
@@ -545,8 +555,8 @@
                     <form id="signInForm" class="single-line-input-form col-12">
                         <div class="form-group">
                             <label for="username">Enter Email</label>
-                            <input name="username" type="text" class="form-control" id="recover-email" aria-describedby="emailHelp"
-                                placeholder="Email">
+                            <input name="username" type="text" class="form-control" id="recover-email"
+                                aria-describedby="emailHelp" placeholder="Email">
                             <p class="recover_err_msg"></p>
                         </div>
                         <p data-sign-btn class="flash_btn" data-toggle="modal" data-target="#logInModal">Sign In</p>
