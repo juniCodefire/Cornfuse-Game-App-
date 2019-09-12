@@ -261,27 +261,100 @@ body {
   transform: scale(2)
     /* height: 60%; */
 }
+.play-game-con{
+  position: absolute;
+  top: .7vh;
+  left: 50vw;
+}
+.neon-play-game{
+  position: relative;
+  /* top: 2vh;
+  left: 50vw; */
+  display: inline-block;
+  padding: 10px 30px;
+  transition: 0.2s;
+  color: lime !important;
+  overflow: hidden;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 20px;
+  /* border: 1px solid lime; */
 
+}
+.neon-play-game:hover{
+  color:white !important;
+  background: limegreen;
+  transition: 0.2s;
+  box-shadow: 0 0 20px limegreen, 0 0 80px limegreen, 0 0 160px limegreen;
+  text-decoration: none;
+  transition-delay: 1s;
+}
+.neon-play-game span{
+  position: absolute;
+  display: block;
+}
+.neon-play-game span:nth-child(1){
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, lime)
+}
+.neon-play-game:hover span:nth-child(1){
+  left: 100%;
+  transition: 1s;
+}
+.neon-play-game span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, lime)
+}
+.neon-play-game:hover span:nth-child(2){
+  top: 100%;
+  transition: 1s;
+  transition-delay: .25s;
+}
+.neon-play-game span:nth-child(3){
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, lime)
+}
+.neon-play-game:hover span:nth-child(3){
+  right: 100%;
+  transition: 1s;
+  transition-delay: .5s;
+}
+.neon-play-game span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, lime)
+}
+.neon-play-game:hover span:nth-child(4){
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: .75s;
+}
+.play-btn{
+  border-radius: 20px;
+  padding: 10px 20px;
+}
 .play_game {
   position: absolute;
   left: 50%;
-  color: white;
-  background: url('../images/GIFs/playbtn.gif') center no-repeat;
-  background-size: 200% 200%;
-  padding: 0px;
-  margin-left: -90px;
-  border-radius: 50px;
-  padding-right: 10px;
-  padding-left: 10px;
+  color: lime;
+  /* background:linear-gradient(rgba(192,255,0,0.4), rgba(182,255,0,0.5)), url('../images/GIFs/playbtn.gif') center no-repeat; */
   font-size: 20px;
   font-family: 'Ma Shan Zheng', cursive;
   cursor: pointer;
-  border:10px solid rgba(0, 0, 0, 0.3)
 
 }
 
 .play_game span {
-  color: lightgrey;
   transition: transform 0.6s;
   text-shadow: 1px 1px 1px black;
   letter-spacing: 0.3em;
@@ -290,14 +363,15 @@ body {
 
 .play_game:hover span:nth-child(1) {
   transform: translateY(-2px) rotate(5deg) scale(1.2);
-  color: lime;
+  color: white;
 }
 
 .play_game:hover span:nth-child(2) {
   transform: translateY(2px) rotate(-5deg) scale(1.2);
-  color: lime;
+  color: white;
   order: -1;
 }
+
 
 #navbarSupportedContent {
   width: 70%;
