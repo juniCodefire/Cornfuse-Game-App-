@@ -9,7 +9,7 @@ const submitContactForm = (event) => {
 	document.querySelectorAll('.con_err_msg')[2].textContent = "";	
 
 	const formData = new FormData(contact_form);
-	if (formData.get('username') == "") {
+	if (formData.get('name') == "") {
 		document.querySelectorAll('.con_err_msg')[0].textContent = "Username field is required!";
 	}else if(formData.get('email') == "") {
 		document.querySelectorAll('.con_err_msg')[1].textContent = "Email field is required(a valid email should be used)!";	
@@ -17,7 +17,12 @@ const submitContactForm = (event) => {
 		document.querySelectorAll('.con_err_msg')[2].textContent = "Password field is required(secure password should be used)!";
 	}else {
 		let status;
-		const data = new URLSearchParams(formData);
+		let data = {};
+
+		for (const [key, value]  of formData.entries()) {
+		    data[key] = value;
+		}
+
 		const errorHandling = (response) => {
 			    status = response.status;
 			    return response.json()
@@ -26,7 +31,10 @@ const submitContactForm = (event) => {
 		fetch(api, {
 			method: 'POST',
 			mode: 'cors',
-	        body: data
+	        headers: {
+		 	 "Content-Type": "application/json"
+			 },
+			body: JSON.stringify(data)
 		})
 		.then(response => errorHandling(response))
 		.then(data => {

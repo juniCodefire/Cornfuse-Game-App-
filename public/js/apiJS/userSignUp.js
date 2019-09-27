@@ -24,12 +24,20 @@ const signUpFormFunc = (event) => {
 			return response.json();
 		}
 
-		const data = new URLSearchParams(formData);
+		let data = {};
+
+		for (const [key, value]  of formData.entries()) {
+		    data[key] = value;
+		}
+
 		const url = `${baseUrl}api/sign_up`;
 		fetch(url, {
 		 method: "POST",
 		 mode: "cors",
-		 body: data
+		 headers: {
+		 	 "Content-Type": "application/json"
+		 },
+		 body: JSON.stringify(data)
 		})
 		.then(response => errorHandling(response))
 		.then(data => {
