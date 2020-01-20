@@ -1,5 +1,6 @@
 body {
 	overflow: hidden;
+	font-family: 'Cabin Sketch', cursive;
 }
 .game-background{
 	height: 100vh;
@@ -16,7 +17,7 @@ body {
 	z-index: 999;
 	border-radius: 10px;
 	transition: 1s all ease;
-	display: none;
+	opacity: 0;
 }
 .select_play_btn .data_play_block {
 	width: 75%;
@@ -24,7 +25,7 @@ body {
 	position: absolute;
 	z-index: 9999;
 	left: 12%;
-	top: 5%;
+	top: 10%;
 }
 .play_text {
 	color: white;
@@ -48,13 +49,24 @@ body {
 
 }
 .slick-current:hover .select_play_btn {
-	display: block;
-	transform: scale(1.003);
+	opacity: 1;
 }
 .slick-current:focus .select_play_btn {
-	display: block;
-	transform: scale(1.003);
+	opacity: 1;
+
 }
+.accessibility {
+	opacity: 0;
+	transition: 1s all ease;
+}
+.slick-current:hover .accessibility {
+	opacity: 1;
+}
+.slick-current:focus .accessibility {
+	opacity: 1;
+}
+
+
 .slider-area{
 	margin-top: 25vh;
 	opacity: 1 !important;
@@ -78,7 +90,8 @@ body {
 .game-name span{
 	font-size: 20px;
 	font-weight: 700;
-	font-family: 'Titillium Web', sans-serif;
+	/*font-family: 'Titillium Web', sans-serif;*/
+	font-family: 'Lobster', cursive;
 }
 /* .slick-current .games{
 	transform: scale(1.3);
@@ -104,4 +117,112 @@ body {
   height: 100px;
   margin-top: -50px;
   margin-left: -50px;
+}
+.cornfuse-shocase-header-box {
+	padding: 10px;
+}
+.cornfuse-shocase-header-image {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+    max-width: 50px;
+    max-height: 50px;
+    margin: 3px;
+    background: none !important;
+}
+.logout-sty {
+	-ms-transform: rotate(270deg); /* IE 9 */
+  -webkit-transform: rotate(270deg); /* Safari 3-8 */
+  transform: rotate(270deg);
+}
+.toggle-game {
+	width: 50%; height: 30px; margin: auto;
+	border: 1px solid #99004d;
+	font-family: 'Lobster', cursive;
+}
+
+#all-games {
+	background: #1c312d;
+}
+.favorite-game-drop {
+	height: 85vh; 
+	background: #1c312d;
+	padding: 0px;
+	font-family: 'Lobster', cursive;
+}
+.favorite-game-drop a {
+	letter-spacing: 2px;
+}
+.favorite-game-drop a:hover {
+	background: #11ff00;
+	color: black !important;
+}
+#favoritesModal .modal-header{
+	font-family: 'Cabin Sketch', cursive;
+}
+.favorites-con {
+	max-height: 80vh;
+}
+.favorite {
+	min-height: 8vh;
+	border-radius: 10px;
+}
+.favorite a {
+	color: lightgrey;
+	text-decoration: none;
+}
+.favoriteBox {
+	color: lightgrey;
+	background: #1c312d;
+}
+.favorite-game-view {
+	border-radius: 10px 0px 0px 10px;
+	border-right:none !important;
+	border-top:none !important;
+	border-bottom:none !important;
+	opacity: 0.8;
+	transition: 0.5s all ease;
+}
+.favorite-game-view:hover {
+	border-left-color:#11ff00 !important;
+	/* border-bottom-color:#11ff00 !important; */
+	opacity: 1;
+}
+.favorite-game-delete {
+	border-radius: 10px 10px 10px 0px;
+	border-left:none !important;
+	border-top:none !important;
+	border-bottom:none !important;
+	transition:0.5s all ease;
+	opacity: 0.8;
+}
+.favorite-game-delete:hover {
+	border-right-color:tomato !important;
+	/* border-bottom-color:tomato !important; */
+	opacity: 1;
+}
+
+.favorite-name {
+	font-size: 18px;
+	font-family: 'Cabin Sketch', cursive;
+}
+.user-setting-drop {
+	background: #1c312d; !important;
+}
+.user-setting-drop a{
+	color: lightgrey !important;
+	padding: .5rem 1.0rem !important;
+	opacity: 0.8;
+	transition: 0.5s all ease;
+	background: inherit !important;
+}
+.user-setting-drop a:hover{
+	opacity: 1;
+}
+
+
+@media(max-width: 768px) {
+	.toggle-game {
+		width: 70%;
+	}
 }

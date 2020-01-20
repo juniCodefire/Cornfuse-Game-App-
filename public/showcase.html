@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,9 +14,10 @@
     <link rel="stylesheet" href="slick/slick-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/animated.css" />
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/showcase.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animated.css"/>
+    <link rel="stylesheet" href="css/global.css"/>
+    <link rel="stylesheet" href="css/showcase.css"/>
     <title>Showcase</title>
     <!-- <script>
         setInterval(() =>
@@ -43,8 +43,42 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 games-con px-0">
-                <div class="game-background col-12 border px-0" data-game-bg>
-                    <section class="col-11 mx-auto slider-area slider">
+                <div class="game-background col-12 px-0" data-game-bg>
+                    <section class="row col-12 mx-0 text-white cornfuse-shocase-header-box">
+                        <div class="col">
+                            <img src="images/user-img.png" data-user-img class="cornfuse-shocase-header-image img-thumbnail dropdown-toggle"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="text-white" data-username style="font-family: 'Lobster', cursive;">Loading...</span>
+                              <div class="dropdown-menu user-setting-drop" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="profile-setting.html">
+                                    <img src="images/setting.png" style="width: 5vh; height: 5vh;" class="cornfuse-shocase-header-image saved-icon-sty" id="saved-icon-sty"data-toggle="modal" data-target="#favoritesModal"> Profile Setting</a>
+                                <a class="dropdown-item" href="game-setting.html">
+                                <img src="images/game-setting.png" style="width: 5vh; height: 5vh;" class="cornfuse-shocase-header-image saved-icon-sty" id="saved-icon-sty"data-toggle="modal" data-target="#favoritesModal"> Game Setting</a>
+                                <a class="dropdown-item" href="account.html">
+                                <img src="images/account.png" style="width: 5vh; height: 5vh;" class="cornfuse-shocase-header-image saved-icon-sty" id="saved-icon-sty"data-toggle="modal" data-target="#favoritesModal"> Account</a>
+                                <a class="dropdown-item" href="wallet.html">
+                                <img src="images/wallet.png" style="width: 5vh; height: 5vh;" class="cornfuse-shocase-header-image saved-icon-sty" id="saved-icon-sty"data-toggle="modal" data-target="#favoritesModal"> Wallet</a>
+                                <a class="dropdown-item" href="friends.html">
+                                <img src="images/user-group.png" style="width: 5vh; height: 5vh;" class="cornfuse-shocase-header-image saved-icon-sty" id="saved-icon-sty"data-toggle="modal" data-target="#favoritesModal"> Friends</a>
+                              </div>
+                        </div>
+                        <div class="col col-lg-2">
+                            <div class="showcase-menu" id="showcase-menu">
+                                <img src="images/save.png" class="cornfuse-shocase-header-image saved-icon-sty" id="saved-icon-sty"data-toggle="modal" data-target="#favoritesModal">
+                                <img src="images/logout.png" data-logout class="cornfuse-shocase-header-image logout-sty rounded-circle logout-icon-sty" id="logout-icon-sty">
+                            </div>
+                        </div>
+                        <span class="tooltiptext saved" id="custom-tooltip"></span>
+                    </section>
+                    <section class="row justify-content-md-center text-white mx-auto col-4 px-0 text-center" style="margin-top: 20px;">
+                        <div class="col-md-auto toggle-game" id="all-games">
+                          All
+                        </div>
+                        <div class="col-md-auto toggle-game" id="favorite-games">
+                          Favourite Game
+                        </div>
+                    </section>
+                    <section class="col-11 mx-auto slider-area slider" style="margin-top: 20px;">
                         <div class="games px-3">
                             <div class="col-12 border mt-5 games-visible px-0">
                                 <div class="select_play_btn">
@@ -56,11 +90,15 @@
                                         </div>
                                     </a>
                                 </div>
+                                <div class="col-12 row text-right mx-auto px-0 accessibility" style="position: absolute; z-index: 99999;">
+                                    <span class="col-2"><img style="width: 3vh; height:3vh; margin: 5px;" src="images/save.png"></span>
+                                    <span class="col-2"><img style="width: 3vh; height:3vh; margin: 5px;" src="images/share.png"></span>
+                                </div>
                                 <div class="col-12 game-image border-bottom game-image-holder px-0">
                                     <img src="images/Game-Backgrounds/game-1-bg.png" alt="">
                                 </div>
                                 <div class="col-12 game-name text-center mx-auto mt-2">
-                                    <span class="">Game Name</span>
+                                    <span class="">Game Name1</span>
                                 </div>
                             </div>
                         </div>
@@ -74,6 +112,10 @@
                                             </div>
                                         </div>
                                     </a>
+                                </div>
+                                <div class="col-12 row text-right mx-auto px-0 accessibility" style="position: absolute; z-index: 99999;">
+                                    <span class="col-2"><img style="width: 3vh; height:3vh; margin: 5px;" src="images/save.png"></span>
+                                    <span class="col-2"><img style="width: 3vh; height:3vh; margin: 5px;" src="images/share.png"></span>
                                 </div>
                                 <div class="col-12 game-image border-bottom game-image-holder px-0">
                                     <img src="images/Game-Backgrounds/game-2-bg.jpg" alt="">
@@ -151,6 +193,10 @@
                                         </div>
                                     </a>
                                 </div>
+                                <div class="col-12 row text-right mx-auto px-0 accessibility" style="position: absolute; z-index: 99999;">
+                                    <span class="col-2"><img style="width: 3vh; height:3vh; margin: 5px;" src="images/save.png"></span>
+                                    <span class="col-2"><img style="width: 3vh; height:3vh; margin: 5px;" src="images/share.png"></span>
+                                </div>
                                 <div class="col-12 game-image border-bottom game-image-holder px-0">
                                     <img src="images/Game-Backgrounds/game-2-bg.jpg" alt="">
                                 </div>
@@ -188,6 +234,10 @@
                                             </div>
                                         </div>
                                     </a>
+                                </div>
+                                <div class="col-12 row text-right mx-auto px-0 accessibility" style="position: absolute; z-index: 99999;">
+                                    <span class="col-2"><img style="width: 3vh; height:3vh; margin: 5px;" src="images/save.png"></span>
+                                    <span class="col-2"><img style="width: 3vh; height:3vh; margin: 5px;" src="images/share.png"></span>
                                 </div>
                                 <div class="col-12 game-image border-bottom game-image-holder px-0">
                                     <img src="images/Game-Backgrounds/game-2-bg.jpg" alt="">
@@ -217,8 +267,53 @@
                             </div>
                         </div>
                     </section>
+                    <section class="row justify-content-md-center  text-white mx-auto col-8 cornfuse-showcase-game-desc">
+                        <div class="col-md-auto" style="  width: 100%; margin: auto; font-family: 'Lobster', cursive;" data-game-desc>
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        </div>
+                    </section>
                 </div>
             </div>
+        </div>
+    </div>
+     <div class="modal fade" id="favoritesModal" tabindex="-1" role="dialog" aria-labelledby="favoritesModalLabel" aria-hidden="true">
+        <div class="modal-dialog m-0" style="max-width: 100vw" role="document">
+        <div class="modal-content ml-auto favoriteBox" style="width: 30%; min-height: 100vh;">
+            <div class="modal-header">
+                <h5 class="modal-title">Favourites [100] </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <div class="modal-body">
+                <div class="col-12 favorites-con scroller px-0">
+                    <div class="favorite px-0 col-12 mb-2 row mx-0">
+                        <div class="col-9 favorite-game-view border">
+                            <a href="#"><p class="favorite-name mt-2">Flip Card</p></a>
+                        </div>
+                        <div class="col-3 favorite-game-delete border">
+                            <img class="mt-2" style="width: 5vh; height: 5vh;" src="images/trash.png">
+                        </div>
+                    </div>
+                    <div class="favorite px-0 col-12 mb-2 row mx-0">
+                        <div class="col-9 favorite-game-view border">
+                            <a href="#"><p class="favorite-name mt-2">Turning Log</p></a>
+                        </div>
+                        <div class="col-3 favorite-game-delete border">
+                            <img class="mt-2" style="width: 5vh; height: 5vh;" src="images/trash.png">
+                        </div>
+                    </div>
+                    <div class="favorite px-0 col-12 mb-2 row mx-0">
+                        <div class="col-9 favorite-game-view border">
+                            <a href="#"><p class="favorite-name mt-2">Car Spark</p></a>
+                        </div>
+                        <div class="col-3 favorite-game-delete border">
+                            <img class="mt-2" style="width: 5vh; height: 5vh;" src="images/trash.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 </body>
@@ -245,14 +340,16 @@
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
-        speed: 2000,
+        autoplaySpeed: 4000,
+        speed: 4000,
         centerPadding: '50px'
     });
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/preloader.js"></script>
+<script src="js/apiJS/logout.js"></script>
 <script src="js/welcome.js"></script>
 <script src="js/selectGames.js"></script>
-<script src="js/cornfuseMemberData.js"></script>
+<script src="js/onSession.js"></script>
+<script src="js/DOMInsert/selectGameInsert.js"></script>
 </html>

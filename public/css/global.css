@@ -10,6 +10,9 @@
 body {
     overflow-x: hidden !important;
 }
+.bold {
+  font-weight: bold;
+}
 .con_err_msg, .sign_err_msg {
   color: red;
   font-size: 14px;
@@ -44,7 +47,7 @@ body {
   font-weight: bold;
   z-index: 9999;
 }
-
+/* End Preloader */
 .rotate {
   animation: rotation 0.7s infinite linear;
 }
@@ -125,7 +128,6 @@ body {
 
 .scroller {
   overflow-y: scroll;
-  overflow-x: hidden;
   scrollbar-width: thin;
   cursor: pointer !important;
 }
@@ -539,4 +541,31 @@ opacity: .5;
 
 .slick-current {
 opacity: 1;
+}
+
+.showcase-menu {
+  float: right;
+  margin-right: 10px;
+}
+
+.tooltiptext {
+ position: absolute;
+ margin-top: 55px;
+ margin-right: 10px;
+ width: 13%;
+ right: 0;
+ border: 1px solid #99004d;
+ padding: 5px;
+ border-radius: 50px;
+ text-align: center;
+ font-size: 12px;
+ opacity: 0;
+ transition: 0.3s;
+ font-family: 'Lobster', cursive;
+}
+
+@media(max-width: 768px) {
+  .tooltiptext {
+   visibility: hidden;
+  }
 }

@@ -30,7 +30,7 @@ const signUpFormFunc = (event) => {
 		    data[key] = value;
 		}
 
-		const url = `${baseUrl}api/sign_up`;
+		const url = `${baseUrl}sign_up`;
 		fetch(url, {
 		 method: "POST",
 		 mode: "cors",

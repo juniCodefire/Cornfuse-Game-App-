@@ -27,7 +27,7 @@ const submitContactForm = (event) => {
 			    status = response.status;
 			    return response.json()
 		}
-		const api = `${baseUrl}api/contact_us/create`;
+		const api = `${baseUrl}contact_us/create`;
 		fetch(api, {
 			method: 'POST',
 			mode: 'cors',

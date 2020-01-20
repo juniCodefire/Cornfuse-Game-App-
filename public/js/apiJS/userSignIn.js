@@ -24,7 +24,7 @@ const signInFormFunc = (event) => {
 		for (const [key, value]  of formData.entries()) {
 		    data[key] = value;
 		}
-		const url = `${baseUrl}api/sign_in`;
+		const url = `${baseUrl}sign_in`;
 		fetch(url, {
 		 method: "POST",
 		 mode: "cors",
